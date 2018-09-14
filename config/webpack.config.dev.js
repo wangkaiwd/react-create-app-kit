@@ -1,6 +1,7 @@
 'use strict'
 
 const autoprefixer = require('autoprefixer')
+const WebpackBar = require('webpackbar');
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -90,7 +91,7 @@ module.exports = {
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
       '@': path.join(__dirname, '..', 'src'),
-      'styles':path.join(__dirname, '..', 'src/assets/styles'),
+      'styles': path.join(__dirname, '..', 'src/assets/styles'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -262,6 +263,7 @@ module.exports = {
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
+    new WebpackBar(),
     // This is necessary to emit hot updates (currently CSS only):
     new webpack.HotModuleReplacementPlugin(),
     // Watcher doesn't work well if you mistype casing in a path so we use
