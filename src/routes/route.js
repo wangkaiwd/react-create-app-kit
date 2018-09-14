@@ -57,7 +57,6 @@ class RouteConfig extends Component {
       </Router>
     )
   }
-
 }
 
 export default RouteConfig

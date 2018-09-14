@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { fetchList } from '@/api'
 import { Button, Table, Divider, Tag } from 'antd'
 
 const data = [{
@@ -27,6 +28,10 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {}
+  }
+
+  componentDidMount () {
+    this.getList()
   }
 
   columns = () => {
@@ -63,6 +68,9 @@ class App extends Component {
     </span>
       ),
     }]
+  }
+  getList = () => {
+    fetchList({}, res => console.log(res))
   }
 
   render () {

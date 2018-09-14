@@ -7,13 +7,10 @@
 import axios from 'axios'
 import qs from 'qs'
 
+import httpServer from '@/http/serverConfig'
 import { message } from 'antd'
-
-message.config({
-  top: 100,
-  duration: 2,
-  maxCount: 1,
-})
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 let pending = [] //声明一个数组用于存储每个ajax请求的取消函数和ajax标识
 let timerId = null
@@ -22,7 +19,7 @@ let cancelToken = axios.CancelToken
 // 频繁请求时只会执行最新的请求（如：表单的input事件，以及列表搜索）
 let removePending = (config) => {
   for (let p in pending) {
-    if (pending[p].u === config.url + '&' + config.method) { //当当前请求在数组中存在时执行函数体
+    if (pending[p].u === config.url + '&' + config.method) { //当前请求在数组中存在时执行函数体
       pending[p].f('请求过于频繁！') //执行取消操作
       pending.splice(p, 1) //把这条记录从数组中移除
     }
@@ -46,7 +43,7 @@ const getToken = () => {
 }
 
 const instance = axios.create({
-  baseURL: 'https://www.easy-mock.com/mock/5b838e2a445175634e4dbe20/element',
+  baseURL: httpServer.mockURL,
   timeout: 20000,
 })
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -54,6 +51,7 @@ instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlenco
 // 请求拦截
 instance.interceptors.request.use((config) => {
   // console.log('请求成功', config)
+  NProgress.start()
   const {method, data} = config
   removePending(config)
   config.cancelToken = new cancelToken((c) => {
@@ -65,7 +63,6 @@ instance.interceptors.request.use((config) => {
   }
   const token = getToken()
   token && (config.headers['user_token'] = token)
-  message.loading('加载中...')
   return config
 }, (error) => {
   return Promise.reject(error)
@@ -76,6 +73,7 @@ instance.interceptors.response.use((response) => {
   // console.log('响应成功', response)
   // Do something with response data
   if (response.status === 200) {
+    NProgress.done()
     // if (response.data.code === 0) {
     //   return response.data
     // }
@@ -99,7 +97,7 @@ instance.interceptors.response.use((response) => {
  * @param method {String} 请求方式
  * @returns {Function} 返回调用接口函数
  */
-export const ajaxFunc = (url, method = 'post') => {
+const ajaxFunc = (url, method = 'post') => {
   const errorFunc = err => {
     // console.log('请求成功-失败', err)
     err.msg && message(err.msg)
@@ -137,3 +135,4 @@ const handleErrorCode = (code) => {
       break
   }
 }
+export default ajaxFunc
