@@ -1,26 +1,5 @@
 import React, { Component } from 'react'
-import { fetchList } from '@/api'
-import { Button, Table, Divider, Tag } from 'antd'
-
-const data = [{
-  key: '1',
-  name: 'John Brown',
-  age: 32,
-  address: 'New York No. 1 Lake Park',
-  tags: ['nice', 'developer'],
-}, {
-  key: '2',
-  name: 'Jim Green',
-  age: 42,
-  address: 'London No. 1 Lake Park',
-  tags: ['loser'],
-}, {
-  key: '3',
-  name: 'Joe Black',
-  age: 32,
-  address: 'Sidney No. 1 Lake Park',
-  tags: ['cool', 'teacher'],
-}]
+import SideMenu from '@/components/SideMenu'
 
 class App extends Component {
   constructor (props) {
@@ -28,55 +7,10 @@ class App extends Component {
     this.state = {}
   }
 
-  componentDidMount () {
-    console.log('1')
-    this.getList()
-  }
-
-  columns = () => {
-    return [{
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
-      render: text => <a href="javascript:">{text}</a>,
-    }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
-    }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
-    }, {
-      title: 'Tags',
-      key: 'tags',
-      dataIndex: 'tags',
-      render: tags => (
-        <span>
-      {tags.map(tag => <Tag color="blue" key={tag}>{tag}</Tag>)}
-    </span>
-      ),
-    }, {
-      title: 'Action',
-      key: 'action',
-      render: (text, record) => (
-        <span>
-      <a href="javascript:">Invite {record.name}</a>
-      <Divider type="vertical"/>
-      <a href="javascript:">Delete</a>
-    </span>
-      ),
-    }]
-  }
-  getList = () => {
-    console.log('2')
-    fetchList({}, res => console.log(res))
-  }
-
   render () {
     return (
-      <div className="App">
-        <Table columns={this.columns()} dataSource={data}/>
+      <div className="container" style={{height: '100vh'}}>
+        <SideMenu/>
       </div>
     )
   }

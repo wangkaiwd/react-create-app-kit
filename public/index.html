@@ -7,12 +7,103 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <title>React App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .skeleton {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .skeleton-tabs {
+      list-style: none;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .skeleton-tabs-item {
+      width: 25%;
+      height: 14.667vw;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 2vw;
+    }
+
+    .skeleton-tabs-item span {
+      display: inline-block;
+      width: 14vw;
+      height: 14vw;
+      border-radius: 14.667vw;
+      background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+      background-size: 400% 100%;
+      animation: ant-skeleton-loading .8s ease infinite;
+    }
+
+    .tabs-flex {
+      flex: 1;
+    }
+
+    .skeleton-banner {
+      height: 18vw;
+      background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+      background-size: 400% 100%;
+      animation: ant-skeleton-loading .8s ease infinite;
+    }
+
+    .skeleton-productions {
+      height: 4vw;
+      margin-bottom: 2vw;
+      background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+      background-size: 400% 100%;
+      animation: ant-skeleton-loading .8s ease infinite;
+    }
+
+    @keyframes ant-skeleton-loading {
+      0% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+  </style>
 </head>
 <body>
 <noscript>
   You need to enable JavaScript to run this app.
 </noscript>
 <div id="root">
+  <div class="skeleton page">
+    <div class="title">
+      <ul class="skeleton-tabs">
+        <li class="skeleton-tabs-item">
+          <span/>
+        </li>
+        <li class="skeleton-tabs-item tabs-flex">
+          <div class="skeleton-productions"></div>
+          <div class="skeleton-productions" style="height:3vw;width:90%;"></div>
+          <div class="skeleton-productions" style="height:2vw;width:80%;"></div>
+          <div class="skeleton-productions3" style="height:1vw;width:70%;"></div>
+      </ul>
+    </div>
+    <div class="skeleton-productions"></div>
+    <div class="skeleton-productions"></div>
+    <div class="skeleton-banner"></div>
+  </div>
 </div>
 </body>
 </html>
