@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SideMenu from '@/components/SideMenu'
+import './App.less'
 
 class App extends Component {
   constructor (props) {
@@ -9,7 +10,7 @@ class App extends Component {
 
   render () {
     return (
-      <div className="container" style={{height: '100vh'}}>
+      <div className="container">
         <SideMenu/>
       </div>
     )
