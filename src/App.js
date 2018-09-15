@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
 import { fetchList } from '@/api'
 import { Button, Table, Divider, Tag } from 'antd'
 
@@ -31,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount () {
+    console.log('1')
     this.getList()
   }
 
@@ -70,34 +69,13 @@ class App extends Component {
     }]
   }
   getList = () => {
+    console.log('2')
     fetchList({}, res => console.log(res))
   }
 
   render () {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button type="primary">Primary</Button>
-        <Button>Default</Button>
-        <Button type="dashed">Dashed</Button>
-        <Button type="danger">Danger</Button>
-        {/*<ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/inbox">Topics</Link>
-            </li>
-          </ul>*/}
         <Table columns={this.columns()} dataSource={data}/>
       </div>
     )
