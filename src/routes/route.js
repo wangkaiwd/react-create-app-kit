@@ -6,9 +6,8 @@
  **/
 import React, { Component } from 'react'
 import App from '../App'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import About from '@/pages/About'
-import Inbox from '@/pages/Inbox'
+import Login from '@/pages/login'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
 class RouteConfig extends Component {
   render () {
@@ -16,6 +15,7 @@ class RouteConfig extends Component {
       <Router>
         <div className="content">
           <Route path="/" component={App}/>
+          <Route path="/login" exact={true} component={Login}/>
         </div>
       </Router>
     )

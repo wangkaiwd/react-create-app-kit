@@ -1,3 +1,6 @@
+@import '~styles/var.less';
+
+@gray: #5f5f5f;
 .side-menu-component {
   height: 100%;
   .trigger {
@@ -11,14 +14,49 @@
     color: #1890ff;
   }
   .logo {
-    height: 32px;
+    min-height: 32px;
     background: rgba(255, 255, 255, .2);
     margin: 16px;
   }
+  // 内容部分动画
   .content {
+    position: relative;
     margin: 24px 16px;
-    padding: 24px;
+    //padding: 24px;
+    opacity: 1;
     background: #fff;
     min-height: 280px;
+    overflow: hidden;
+    // 渐隐渐现
+    .fade-appear,
+    .fade-enter {
+      opacity: 0;
+    }
+
+    .fade-appear-active,
+    .fade-enter-active {
+      transition: opacity .6s linear;
+      opacity: 1;
+    }
+
+    .fade-exit {
+      transition: opacity .6s linear;
+      opacity: 1;
+    }
+
+    .fade-exit-active {
+      opacity: 0;
+    }
+  }
+  // 侧边栏激活背景色
+  .ant-menu-item-selected {
+    background-color: @gray !important;
+  }
+  // 左侧边栏字体大小
+  .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-inline .ant-menu-submenu-title {
+    font-size: @font-size-sm;
+  }
+  .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    font-size: @font-size-sm;
   }
 }

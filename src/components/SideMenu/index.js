@@ -3,12 +3,14 @@
  * 左侧边栏
  */
 import React, { Component } from 'react'
-import { Layout, Menu, Icon } from 'antd'
+import { Link } from 'react-router-dom'
+import { Layout, Menu, Icon, Switch } from 'antd'
 import './index.less'
 import leftMenuList from './config'
 import TopHeader from '../TopHeader'
+import PageContent from './content'
 
-const {Header, Sider, Content} = Layout
+const {Sider} = Layout
 const SubMenu = Menu.SubMenu
 
 class SideMenu extends Component {
@@ -16,6 +18,7 @@ class SideMenu extends Component {
     super(props)
     this.state = {
       collapsed: false,
+      theme: sessionStorage.theme || 'dark',
     }
   }
 
@@ -29,8 +32,10 @@ class SideMenu extends Component {
       if (!item.options) {
         return (
           <Menu.Item key={item.key}>
-            {item.icon && <Icon type={item.icon}/>}
-            <span>{item.text}</span>
+            <Link to={item.key} key={item.key}>
+              {item.icon && <Icon type={item.icon}/>}
+              <span>{item.text}</span>
+            </Link>
           </Menu.Item>
         )
       }
@@ -51,30 +56,45 @@ class SideMenu extends Component {
   createMenus = (menus) => (
     menus.map(sub => (
       <Menu.Item key={sub.key}>
-        {sub.icon && <Icon type={sub.icon}/>}
-        <span>{sub.text}</span>
+        <Link to={sub.key}>
+          {sub.icon && <Icon type={sub.icon}/>}
+          <span>{sub.text}</span>
+        </Link>
       </Menu.Item>
     ))
   )
+  changeTheme = (value) => {
+    this.setState(
+      {theme: value ? 'dark' : 'light'},
+      () => sessionStorage.setItem('theme', this.state.theme)
+    )
+  }
 
   render () {
+    const siderStyle = {backgroundColor: '#fff'}
+    const {collapsed, theme} = this.state
     return (
       <Layout className="side-menu-component">
         <Sider
           trigger={null}
           collapsible
-          collapsed={this.state.collapsed}
+          collapsed={collapsed}
+          style={theme === 'light' && siderStyle}
         >
           <div className="logo">英树官方商城</div>
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Switch
+            checked={theme === 'dark'}
+            onChange={this.changeTheme}
+            checkedChildren="Dark"
+            unCheckedChildren="Light"
+          />
+          <Menu theme={theme} mode="inline" defaultSelectedKeys={['1']}>
             {this.createSubMenus(leftMenuList)}
           </Menu>
         </Sider>
         <Layout>
-          <TopHeader collapsed={this.state.collapsed} toggle={this.toggle}/>
-          <Content className="content">
-            Content
-          </Content>
+          <TopHeader collapsed={collapsed} toggle={this.toggle}/>
+          <PageContent/>
         </Layout>
       </Layout>
     )

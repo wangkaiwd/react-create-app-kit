@@ -5,6 +5,7 @@
  * @Desc:
  **/
 import React, { Component } from 'react'
+import './inbox.less'
 
 export default class Inbox extends Component {
   constructor (props) {
@@ -14,7 +15,8 @@ export default class Inbox extends Component {
 
   render () {
     return (
-      <div>Inbox</div>
+      <div className="inbox">Inbox
+      </div>
     )
   }
 }

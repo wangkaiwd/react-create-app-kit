@@ -9,7 +9,7 @@ import { message } from 'antd'
 import instance from './axiosConfig'
 
 /**
- * 提前定义接口路径，请求方法和是否需要短提示
+ * 提前定义接口路径，请求方法
  * @param url {String} 请求地址
  * @param method {String} 请求方式
  * @returns {Function} 返回调用接口函数

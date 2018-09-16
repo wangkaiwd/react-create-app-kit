@@ -23,7 +23,7 @@ let cancelToken = axios.CancelToken
 const removePending = (config) => {
   for (let i = pending.length - 1; i >= 0; i--) {
     if (pending[p].u === config.url + '&' + config.method) { //当前请求在数组中存在时执行函数体
-      pending[p].f('请求过于频繁！') //执行取消操作
+      pending[p].f() //执行取消操作
       pending.splice(p, 1) //把这条记录从数组中移除
     }
   }
@@ -38,9 +38,7 @@ const instance = axios.create({
   timeout: 20000,
 })
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
-// 请求拦截
 instance.interceptors.request.use((config) => {
-  // console.log('请求成功', config)
   const {method, data} = config
   removePending(config)
   NProgress.start()
@@ -57,8 +55,6 @@ instance.interceptors.request.use((config) => {
 }, (error) => {
   return Promise.reject(error)
 })
-//
-// 响应拦截
 instance.interceptors.response.use((response) => {
   NProgress.done()
   removePending(response)
@@ -74,9 +70,6 @@ instance.interceptors.response.use((response) => {
     return Promise.reject(response)
   }
 }, function (error) {
-  // Toast('响应失败了，请刷新页面重试！！');
-  // console.error('响应失败', error);
-  // 这里可以用来处理断网情况，包括超时和请求路径失败等
   return Promise.reject(error)
 })
 export default instance
