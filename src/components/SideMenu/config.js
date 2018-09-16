@@ -1,13 +1,17 @@
 // 左侧边栏配置
+import About from '@/pages/about/About'
+import Inbox from '@/pages/inbox/Inbox'
+import Example from '@/pages/example'
+
 const leftMenuList = [
   {
-    key: '1', text: '测试1', icon: 'form',
+    key: '/home/test', text: '测试1', icon: 'form',
     options: [
-      {key: '1-1', text: '测试1-1', icon: 'clock-circle'}
+      {key: '/home/test/example', text: '测试1-1', icon: 'clock-circle', component: Example}
     ],
   },
-  {key: '/about', text: '关于', icon: 'copy'},
-  {key: '/inbox', text: '信箱', icon: 'diff'},
+  {key: '/home/about', text: '关于', icon: 'copy', component: About},
+  {key: '/home/inbox', text: '信箱', icon: 'diff', component: Inbox},
 ]
 
 export default leftMenuList

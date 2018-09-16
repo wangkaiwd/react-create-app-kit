@@ -3,7 +3,7 @@
  * 左侧边栏
  */
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon, Switch } from 'antd'
 import './index.less'
 import leftMenuList from './config'
@@ -13,13 +13,18 @@ import PageContent from './content'
 const {Sider} = Layout
 const SubMenu = Menu.SubMenu
 
+@withRouter
 class SideMenu extends Component {
   constructor (props) {
     super(props)
+    const {pathname} = this.props.history.location
     this.state = {
       collapsed: false,
       theme: sessionStorage.theme || 'dark',
+      defaultSelectedKeys: [pathname],
+      openKeys: []
     }
+    // console.log(this.props.history.location.pathname)
   }
 
   toggle = () => {
@@ -72,7 +77,8 @@ class SideMenu extends Component {
 
   render () {
     const siderStyle = {backgroundColor: '#fff'}
-    const {collapsed, theme} = this.state
+    const {collapsed, theme, defaultSelectedKeys} = this.state
+    console.log(defaultSelectedKeys)
     return (
       <Layout className="side-menu-component">
         <Sider
@@ -80,6 +86,7 @@ class SideMenu extends Component {
           collapsible
           collapsed={collapsed}
           style={theme === 'light' && siderStyle}
+          className={theme === 'dark' && 'dark'}
         >
           <div className="logo">英树官方商城</div>
           <Switch
@@ -88,7 +95,7 @@ class SideMenu extends Component {
             checkedChildren="Dark"
             unCheckedChildren="Light"
           />
-          <Menu theme={theme} mode="inline" defaultSelectedKeys={['1']}>
+          <Menu theme={theme} mode="inline" defaultSelectedKeys={defaultSelectedKeys}>
             {this.createSubMenus(leftMenuList)}
           </Menu>
         </Sider>
