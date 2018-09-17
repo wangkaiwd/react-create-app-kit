@@ -16,18 +16,16 @@ export default class PageContent extends Component {
 
   render () {
     const {location, match} = this.props
-    console.log('props', this.props, location.pathname)
-    const shouldRedirect = match.url === window.location.pathname
     return (
       <Router>
         <Content className="content">
           <TransitionGroup>
             <CSSTransition key={location.pathname} classNames="fade" timeout={600}>
               <Switch location={location}>
-                <Route path="/home/test/example" component={Example}/>
-                <Route path="/home/about" component={About}/>
-                <Route path="/home/inbox" component={Inbox}/>
-                <Redirect to="/home/test/example"/>
+                <Route path={`${match.path}/test/example`} component={Example}/>
+                <Route path={`${match.path}/about`} component={About}/>
+                <Route path={`${match.path}/inbox`} component={Inbox}/>
+                <Redirect to={`${match.path}/test/example`}/>
               </Switch>
             </CSSTransition>
           </TransitionGroup>
