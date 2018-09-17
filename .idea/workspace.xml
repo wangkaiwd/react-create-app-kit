@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e339b9ff-91b6-40e1-a383-4b20e3b6d263" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/example/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,11 +62,12 @@
     <session id="752726228">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,9 +76,9 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="3" />
           <entry key="js" value="48" />
-          <entry key="json" value="4" />
+          <entry key="json" value="5" />
           <entry key="less" value="15" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="svg" value="1" />
         </counts>
       </usages-collector>
@@ -88,10 +86,10 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
-          <entry key="JSON" value="4" />
+          <entry key="JSON" value="5" />
           <entry key="JavaScript" value="48" />
           <entry key="Less" value="15" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SVG" value="1" />
         </counts>
@@ -101,113 +99,43 @@
           <entry key="gitignore" value="17" />
           <entry key="html" value="204" />
           <entry key="js" value="5187" />
+          <entry key="json" value="11" />
           <entry key="less" value="844" />
-          <entry key="md" value="29" />
-          <entry key="txt" value="103" />
+          <entry key="md" value="352" />
+          <entry key="txt" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="204" />
+          <entry key="JSON" value="11" />
           <entry key="JavaScript" value="5187" />
           <entry key="Less" value="844" />
-          <entry key="Markdown" value="29" />
-          <entry key="PLAIN_TEXT" value="120" />
+          <entry key="Markdown" value="352" />
+          <entry key="PLAIN_TEXT" value="150" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/route.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/content.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="80" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="80" />
-              <folding>
-                <element signature="e#10#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-              <folding>
-                <element signature="e#61#101#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="252">
+                <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/example/index.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/about/About.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" selection-start-line="6" selection-end-line="20" selection-end-column="1" />
-              <folding>
-                <element signature="e#89#129#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/login/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="309">
+              <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -224,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toast</find>
       <find>eslint</find>
       <find>webpack</find>
       <find>autoprefixer</find>
@@ -254,6 +181,7 @@
       <find>rc-tween-one</find>
       <find>resolve</find>
       <find>changeTheme</find>
+      <find>react</find>
     </findStrings>
     <dirStrings>
       <dir>E:\data\react-study\react-create-app-kit\src\components\TopHeader</dir>
@@ -268,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/assets/styles/mixins.less" />
         <option value="$PROJECT_DIR$/src/utils/ajax.js" />
         <option value="$PROJECT_DIR$/config/webpackDevServer.config.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/src/pages/Inbox.js" />
@@ -276,7 +203,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/http/ajax.js" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/assets/styles/reset.less" />
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -302,6 +228,8 @@
         <option value="$PROJECT_DIR$/src/routes/route.js" />
         <option value="$PROJECT_DIR$/src/components/SideMenu/content.js" />
         <option value="$PROJECT_DIR$/src/components/SideMenu/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -378,37 +306,6 @@
               <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="SideMenu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-create-app-kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-create-app-kit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -422,6 +319,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -457,7 +355,9 @@
       <workItem from="1536892260187" duration="17623000" />
       <workItem from="1536940484241" duration="2594000" />
       <workItem from="1536995344820" duration="25815000" />
-      <workItem from="1537072038988" duration="21767000" />
+      <workItem from="1537072038988" duration="22038000" />
+      <workItem from="1537101724288" duration="20000" />
+      <workItem from="1537185269399" duration="2589000" />
     </task>
     <task id="LOCAL-00001" summary="添加nprogress插件，并模拟实现请求">
       <created>1536942672573</created>
@@ -494,11 +394,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537089180254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加登录页面，并实现侧边栏刷新激活功能">
+      <created>1537095733572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537095733572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73708000" />
+    <option name="totallyTimeSpent" value="76588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -508,7 +415,6 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -520,6 +426,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -538,7 +445,8 @@
     <MESSAGE value="做侧边栏配置完成" />
     <MESSAGE value="加入路由切换淡入淡出动画" />
     <MESSAGE value="加入路由切换淡入淡出动画,并打算添加login页面（失败）" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入路由切换淡入淡出动画,并打算添加login页面（失败）" />
+    <MESSAGE value="添加登录页面，并实现侧边栏刷新激活功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加登录页面，并实现侧边栏刷新激活功能" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scripts/build.js">
@@ -595,16 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
     <entry file="file://$PROJECT_DIR$/demo.html" />
@@ -620,11 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,9 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,9 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#101#126#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-          <folding>
-            <element signature="e#101#131#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,23 +594,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/content.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/content.less" />
     <entry file="file://$PROJECT_DIR$/src/pages/inbox/Inbox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#89#129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -748,9 +620,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" selection-start-line="6" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#89#129#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -758,9 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="80" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="80" />
-          <folding>
-            <element signature="e#10#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,13 +665,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-          <folding>
-            <element signature="e#61#101#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="309">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
