@@ -24,7 +24,6 @@ class SideMenu extends Component {
       defaultSelectedKeys: [pathname],
       openKeys: []
     }
-    // console.log(this.props.history.location.pathname)
   }
 
   toggle = () => {
@@ -78,7 +77,6 @@ class SideMenu extends Component {
   render () {
     const siderStyle = {backgroundColor: '#fff'}
     const {collapsed, theme, defaultSelectedKeys} = this.state
-    console.log(defaultSelectedKeys)
     return (
       <Layout className="side-menu-component">
         <Sider
