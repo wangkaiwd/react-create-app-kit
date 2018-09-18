@@ -6,7 +6,7 @@ import './App.less'
 // 权限验证函数
 const auth = () => {
   const user = [{name: 'admin', password: '123456'}]
-  const {userName, password} = JSON.parse(localStorage.getItem('userInfo'))
+  const {userName, password} = JSON.parse(localStorage.getItem('userInfo')) || {}
   return !(user.name === userName && user.password === password)
 }
 const PrivateRoute = ({component: Component, ...rest}) => (
