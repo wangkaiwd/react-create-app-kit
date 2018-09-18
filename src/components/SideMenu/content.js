@@ -3,8 +3,8 @@ import { HashRouter as Router, Route, Switch, withRouter, Redirect } from 'react
 import About from '@/pages/about/About'
 import Inbox from '@/pages/inbox/Inbox'
 import Example from '@/pages/example'
+import Page404 from '@/pages/404'
 import { Layout } from 'antd'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const {Content} = Layout
 @withRouter
@@ -15,20 +15,17 @@ export default class PageContent extends Component {
   }
 
   render () {
-    const {location, match} = this.props
+    const {match} = this.props
     return (
       <Router>
         <Content className="content">
-          <TransitionGroup>
-            <CSSTransition key={location.pathname} classNames="fade" timeout={600}>
-              <Switch location={location}>
-                <Route path={`${match.path}/test/example`} component={Example}/>
-                <Route path={`${match.path}/about`} component={About}/>
-                <Route path={`${match.path}/inbox`} component={Inbox}/>
-                <Redirect to={`${match.path}/test/example`}/>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
+          <Switch>
+            <Route path={`${match.path}/about`} exact component={About}/>
+            <Route path={`${match.path}/inbox`} exact component={Inbox}/>
+            <Route path={`${match.path}/test/example`} exact component={Example}/>
+            <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
+            <Route component={Page404}/>
+          </Switch>
         </Content>
       </Router>
     )
