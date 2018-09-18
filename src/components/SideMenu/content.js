@@ -15,8 +15,7 @@ export default class PageContent extends Component {
   }
 
   render () {
-    const {location, match} = this.props
-    console.log(location)
+    const {match} = this.props
     return (
       <Router>
         <Content className="content">
