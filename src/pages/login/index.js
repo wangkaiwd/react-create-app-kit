@@ -20,6 +20,7 @@ export default class Login extends Component {
         user.forEach(item => {
           if (item.name === userName && item.password === password) {
             message.success('登录成功')
+            localStorage.setItem('userInfo', JSON.stringify(values))
             this.props.history.push('/home')
             return
           }

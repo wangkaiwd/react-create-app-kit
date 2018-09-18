@@ -17,7 +17,10 @@ const SubMenu = Menu.SubMenu
 class SideMenu extends Component {
   constructor (props) {
     super(props)
-    const {pathname} = this.props.history.location
+    let {pathname} = this.props.history.location
+    if (pathname === '/home') {
+      pathname = '/home/test/example'
+    }
     this.state = {
       collapsed: false,
       theme: sessionStorage.theme || 'dark',
