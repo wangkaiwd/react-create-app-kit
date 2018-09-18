@@ -71,7 +71,6 @@ export default class Example extends Component {
             thumbnailContent={this.getThumbnailContent}
             isOpen={isOpen}
             onClose={this.handleClose}
-            shareLinkClick={false}
           />
           <button type="button" className="btn btn-primary" onClick={this.openPhotoSwipe}>
             Open
