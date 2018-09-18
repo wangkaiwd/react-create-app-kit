@@ -26,6 +26,7 @@
     "less-loader": "^4.1.0",
     "nprogress": "^0.2.0",
     "object-assign": "4.1.1",
+    "photoswipe": "^4.1.2",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
