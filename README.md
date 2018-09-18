@@ -14,7 +14,7 @@
 
 项目目录结构
 ```
-tree
+admin
 ├─ .gitignore                   // git忽略文件
 ├─ README.md                    // 项目说明文档
 ├─ config                       
@@ -33,7 +33,7 @@ tree
 ├─ scripts
 │    ├─ build.js
 │    └─ start.js
-└─ src
+└─ src                          // 项目源码
        ├─ App.js                // 根组件
        ├─ App.less
        ├─ api                   // 后端接口文件

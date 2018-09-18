@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, withRouter, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, withRouter, Redirect } from 'react-router-dom'
 import About from '@/pages/about/About'
 import Inbox from '@/pages/inbox/Inbox'
 import Example from '@/pages/example'
+import Page404 from '@/pages/404'
 import { Layout } from 'antd'
 
 const {Content} = Layout
@@ -20,10 +21,11 @@ export default class PageContent extends Component {
       <Router>
         <Content className="content">
           <Switch>
-            <Route path={`${match.path}/about`} component={About}/>
-            <Route path={`${match.path}/inbox`} component={Inbox}/>
-            <Route path={`${match.path}/test/example`} component={Example}/>
-            <Redirect to={`${match.path}/test/example`}/>
+            <Route path={`${match.path}/about`} exact component={About}/>
+            <Route path={`${match.path}/inbox`} exact component={Inbox}/>
+            <Route path={`${match.path}/test/example`} exact component={Example}/>
+            <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
+            <Route component={Page404}/>
           </Switch>
         </Content>
       </Router>
