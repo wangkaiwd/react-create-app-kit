@@ -37,7 +37,7 @@ class SideMenu extends Component {
   }
   createSubMenus = (leftMenuList) => (
     leftMenuList.map(item => {
-      if (!item.options) {
+      if (!item.options && !item.children) {
         return (
           <Menu.Item key={item.key}>
             <Link to={item.key} key={item.key}>
@@ -56,11 +56,12 @@ class SideMenu extends Component {
               <span>{item.text}</span>
             </span>
           }>
-          {this.createMenus(item.options)}
+          {item.options && this.createMenus(item.options)}
           {item.children && this.createSubMenus(item.children)}
         </SubMenu>)
     })
   )
+
   createMenus = (menus) => (
     menus.map(sub => (
       <Menu.Item key={sub.key}>

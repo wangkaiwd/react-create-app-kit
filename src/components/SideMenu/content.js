@@ -4,6 +4,11 @@ import About from '@/pages/about/About'
 import Inbox from '@/pages/inbox/Inbox'
 import Example from '@/pages/example'
 import Page404 from '@/pages/404'
+import OrderSettings from '@/pages/salesOrder/orderSetting/orderSettings'
+import RefundOrderAgent from '@/pages/salesOrder/refundOrder/agentEnd'
+import RefundOrderMember from '@/pages/salesOrder/refundOrder/memberEnd'
+import TransactionAgent from '@/pages/salesOrder/transactionOrder/agentEnd'
+import TransactionMember from '@/pages/salesOrder/transactionOrder/memberEnd'
 import { Layout, Spin } from 'antd'
 import BreadCrumb from '@/components/BreadCrumb'
 
@@ -22,8 +27,10 @@ export default class PageContent extends Component {
       this.setLoading()
     }
   }
-  componentWillReceiveProps = () => {
-    this.setState({spinning: true})
+  componentWillReceiveProps = (nextProps) => {
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      this.setState({spinning: true})
+    }
   }
 
   setLoading = () => {
@@ -41,6 +48,12 @@ export default class PageContent extends Component {
               <Switch>
                 <Route path={`${match.path}/about`} exact component={About}/>
                 <Route path={`${match.path}/inbox`} exact component={Inbox}/>
+                <Route path={`${match.path}/salesOrder/orderSettings`} exact component={OrderSettings}/>
+                <Route path={`${match.path}/salesOrder/refundOrder/agentEnd`} exact component={RefundOrderAgent}/>
+                <Route path={`${match.path}/salesOrder/refundOrder/memberEnd`} exact component={RefundOrderMember}/>
+                <Route path={`${match.path}/salesOrder/transactionOrder/agentEnd`} exact component={TransactionAgent}/>
+                <Route path={`${match.path}/salesOrder/transactionOrder/memberEnd`} exact
+                       component={TransactionMember}/>
                 <Route path={`${match.path}/test/example`} exact component={Example}/>
                 <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
                 <Route component={Page404}/>

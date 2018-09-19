@@ -24,6 +24,7 @@ export default class index extends Component {
       return this.setState({linkArray: []}, () => this.breadList())
     }
     this.breadList()
+    console.log(this.state.linkArray)
   }
   breadList = () => {
     const {pathname} = this.props.location
@@ -58,6 +59,13 @@ export default class index extends Component {
           this.uniqueArray(subItem, path)
         }
         this.compareLink(subItem.options, path)
+      }
+      else if (subItem.children) {
+        if (subItem.key === path) {
+          this.uniqueArray(subItem, path)
+          this.uniqueArray(subItem.children, path)
+        }
+        this.compareLink(subItem.children, path)
       }
       else {
         if (subItem.key === path) {
