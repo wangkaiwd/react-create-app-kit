@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import SideMenu from '@/components/SideMenu'
 import Login from '@/pages/login'
 import './App.less'
 // 权限验证函数
 const auth = () => {
   const user = [{name: 'admin', password: '123456'}]
-  const {userName, password} = JSON.parse(localStorage.getItem('userInfo'))
+  const {userName, password} = JSON.parse(localStorage.getItem('userInfo')) || {}
   return !(user.name === userName && user.password === password)
 }
 const PrivateRoute = ({component: Component, ...rest}) => (

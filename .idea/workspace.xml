@@ -1,113 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e339b9ff-91b6-40e1-a383-4b20e3b6d263" name="Default Changelist" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="1d1a0864-7fb3-4c45-baf5-d76507f8b7c6" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="e339b9ff-91b6-40e1-a383-4b20e3b6d263" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Gallery/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/example/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/example/index.js" afterDir="false" />
+    </list>
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1789066456">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="5" />
-          <entry key="js" value="31" />
-          <entry key="json" value="4" />
-          <entry key="less" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="5" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="31" />
-          <entry key="Less" value="8" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="60" />
-          <entry key="js" value="1465" />
-          <entry key="less" value="109" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="60" />
-          <entry key="JavaScript" value="1465" />
-          <entry key="Less" value="109" />
-        </counts>
-      </usages-collector>
-    </session>
     <session id="752726228">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="3" />
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="3" />
-          <entry key="js" value="57" />
-          <entry key="json" value="5" />
-          <entry key="less" value="16" />
-          <entry key="md" value="2" />
-          <entry key="svg" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="3" />
-          <entry key="HTML" value="3" />
-          <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="57" />
-          <entry key="Less" value="16" />
-          <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SVG" value="1" />
-        </counts>
-      </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="17" />
-          <entry key="html" value="204" />
-          <entry key="js" value="5978" />
-          <entry key="json" value="11" />
-          <entry key="less" value="844" />
-          <entry key="md" value="352" />
-          <entry key="txt" value="133" />
+          <entry key="js" value="101" />
+          <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="204" />
-          <entry key="JSON" value="11" />
-          <entry key="JavaScript" value="5978" />
-          <entry key="Less" value="844" />
-          <entry key="Markdown" value="352" />
-          <entry key="PLAIN_TEXT" value="150" />
+          <entry key="JavaScript" value="101" />
+          <entry key="PLAIN_TEXT" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -185,7 +116,128 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/example/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Gallery/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/404/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+              <folding>
+                <element signature="e#97#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/content.js">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="567">
+              <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+=======
+            <state relative-caret-position="242">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="59" lean-forward="true" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/pages/login/index.less">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1434">
+              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+              <folding>
+                <element signature="e#61#101#0" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="198">
+                <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -195,6 +247,8 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
   <component name="FindInProjectRecents">
     <findStrings>
       <find>less</find>
@@ -232,12 +286,16 @@
       <dir>E:\data\react-study\react-create-app-kit\src\components\TopHeader</dir>
     </dirStrings>
   </component>
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/components/SideMenu/content.js" />
+=======
         <option value="$PROJECT_DIR$/src/assets/styles/mixins.less" />
         <option value="$PROJECT_DIR$/src/utils/ajax.js" />
         <option value="$PROJECT_DIR$/config/webpackDevServer.config.js" />
@@ -278,68 +336,15 @@
         <option value="$PROJECT_DIR$/node_modules/react-photoswipe/lib/photoswipe.css" />
         <option value="$PROJECT_DIR$/src/pages/example/index.js" />
         <option value="$PROJECT_DIR$/src/components/Gallery/index.js" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>ECMAScript 6 migration aidsJavaScript</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>HTML</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>Meteor</id>
-          </State>
-          <State>
-            <id>Vue</id>
-          </State>
-          <State>
-            <id>XPath</id>
-          </State>
-          <State>
-            <id>XSLT</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>RequiredAttributes</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -360,12 +365,39 @@
               <item name="ys-react-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="ys-react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ys-react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ys-react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ys-react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="ys-react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ys-react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="404" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
   </component>
+<<<<<<< HEAD
+=======
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -382,6 +414,7 @@
       <recent name="E:\personalSpace\codeManage\my-app\src\http" />
     </key>
   </component>
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -410,17 +443,25 @@
       <workItem from="1536995344820" duration="25815000" />
       <workItem from="1537072038988" duration="22038000" />
       <workItem from="1537101724288" duration="20000" />
+<<<<<<< HEAD
+      <workItem from="1537185269399" duration="11159000" />
+=======
       <workItem from="1537185269399" duration="9945000" />
       <workItem from="1537237174107" duration="11763000" />
       <workItem from="1537259103013" duration="48000" />
+<<<<<<< HEAD
       <workItem from="1537269224248" duration="3662000" />
+=======
+      <workItem from="1537269224248" duration="3403000" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
     </task>
-    <task id="LOCAL-00001" summary="添加nprogress插件，并模拟实现请求">
-      <created>1536942672573</created>
+    <task id="LOCAL-00001" summary="页面重定向出现问题">
+      <created>1537199592472</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1536942672573</updated>
+      <updated>1537199592472</updated>
     </task>
     <task id="LOCAL-00002" summary="项目结构整体梳理">
       <created>1537001998642</created>
@@ -457,6 +498,23 @@
       <option name="project" value="LOCAL" />
       <updated>1537095733572</updated>
     </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00007" summary="删除多余的route目录，使用App.js来进行页面展示">
+      <created>1537198491858</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537198491858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="388000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+=======
     <task id="LOCAL-00007" summary="添加目录结构介绍">
       <created>1537237299296</created>
       <option name="number" value="00007" />
@@ -493,6 +551,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+<<<<<<< HEAD
+=======
+    <editor active="true" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14427084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -515,9 +578,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -529,6 +589,29 @@
     <MESSAGE value="加入路由切换淡入淡出动画" />
     <MESSAGE value="加入路由切换淡入淡出动画,并打算添加login页面（失败）" />
     <MESSAGE value="添加登录页面，并实现侧边栏刷新激活功能" />
+<<<<<<< HEAD
+    <MESSAGE value="删除多余的route目录，使用App.js来进行页面展示" />
+    <MESSAGE value="页面重定向出现问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="页面重定向出现问题" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+          <folding>
+            <element signature="e#61#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+=======
     <MESSAGE value="添加目录结构介绍" />
     <MESSAGE value="添加登录权限验证，如果没有登录的话，跳转到登录页面，如果登录有效的话，继续查看当前后台首页" />
     <MESSAGE value="404页面配置完成，发现Redirect也可以设置exact" />
@@ -761,12 +844,40 @@
         <state relative-caret-position="880">
           <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
           <folding>
+<<<<<<< HEAD
+            <element signature="e#0#40#0" expanded="true" />
+=======
+            <element signature="e#97#137#0" expanded="true" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/pages/404/index.js">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/404/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/SideMenu/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/node_modules/react-photoswipe/lib/PhotoSwipeGallery.js">
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
@@ -797,6 +908,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -804,6 +916,13 @@
             <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           </first_editor>
           <second_editor />
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/Gallery/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> 069e7543d9f9b0131e990d72bfb834fe093f3073
+>>>>>>> c315efa1e5b8373cf6f68d2d34bfa97fb4a541d8
         </state>
       </provider>
     </entry>
