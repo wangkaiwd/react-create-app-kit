@@ -24,7 +24,6 @@ export default class PageContent extends Component {
   componentWillReceiveProps = () => {
     this.setState({spinning: true})
   }
-
   setLoading = () => {
     setTimeout(() => this.setState({spinning: false}), 500)
   }
