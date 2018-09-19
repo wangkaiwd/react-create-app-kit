@@ -5,6 +5,7 @@ import Inbox from '@/pages/inbox/Inbox'
 import Example from '@/pages/example'
 import Page404 from '@/pages/404'
 import { Layout, Spin } from 'antd'
+import BreadCrumb from '@/components/BreadCrumb'
 
 const {Content} = Layout
 @withRouter
@@ -33,17 +34,20 @@ export default class PageContent extends Component {
     const {match} = this.props
     return (
       <Router>
-        <Content className="page">
-          <Spin tip="LOADING" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
-            <Switch>
-              <Route path={`${match.path}/about`} exact component={About}/>
-              <Route path={`${match.path}/inbox`} exact component={Inbox}/>
-              <Route path={`${match.path}/test/example`} exact component={Example}/>
-              <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
-              <Route component={Page404}/>
-            </Switch>
-          </Spin>
-        </Content>
+        <React.Fragment>
+          <BreadCrumb/>
+          <Content className="page">
+            <Spin tip="LOADING" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
+              <Switch>
+                <Route path={`${match.path}/about`} exact component={About}/>
+                <Route path={`${match.path}/inbox`} exact component={Inbox}/>
+                <Route path={`${match.path}/test/example`} exact component={Example}/>
+                <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
+                <Route component={Page404}/>
+              </Switch>
+            </Spin>
+          </Content>
+        </React.Fragment>
       </Router>
     )
   }
