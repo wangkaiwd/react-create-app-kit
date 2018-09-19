@@ -91,7 +91,7 @@ class SideMenu extends Component {
           style={theme === 'light' && siderStyle}
           className={theme === 'dark' && 'dark'}
         >
-          <div className="logo">英树官方商城</div>
+          <div className="logo">英树后台</div>
           <Switch
             checked={theme === 'dark'}
             onChange={this.changeTheme}
