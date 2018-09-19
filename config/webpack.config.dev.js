@@ -92,6 +92,7 @@ module.exports = {
       'react-native': 'react-native-web',
       '@': path.join(__dirname, '..', 'src'),
       'styles': path.join(__dirname, '..', 'src/assets/styles'),
+      'images': path.join(__dirname, '..', 'src/assets/images'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).

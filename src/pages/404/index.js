@@ -6,6 +6,8 @@
  **/
 import React, { Component } from 'react'
 import { Button } from 'antd'
+import img404 from 'images/404.png'
+import './index.less'
 import { withRouter } from 'react-router-dom'
 
 @withRouter
@@ -17,8 +19,10 @@ export default class NotFound extends Component {
 
   render () {
     return (
-      <div>
-        <Button type="primary" onClick={() => this.props.history.push('/home')}>回到首页</Button>
+      <div className="page-404">
+        <div className="img404">
+          <img src={img404} alt=""/>
+        </div>
       </div>
     )
   }

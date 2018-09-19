@@ -5,6 +5,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon, Switch } from 'antd'
+
 import './index.less'
 import leftMenuList from './config'
 import TopHeader from '../TopHeader'
@@ -36,7 +37,7 @@ class SideMenu extends Component {
   }
   createSubMenus = (leftMenuList) => (
     leftMenuList.map(item => {
-      if (!item.options) {
+      if (!item.options && !item.children) {
         return (
           <Menu.Item key={item.key}>
             <Link to={item.key} key={item.key}>
@@ -55,11 +56,12 @@ class SideMenu extends Component {
               <span>{item.text}</span>
             </span>
           }>
-          {this.createMenus(item.options)}
+          {item.options && this.createMenus(item.options)}
           {item.children && this.createSubMenus(item.children)}
         </SubMenu>)
     })
   )
+
   createMenus = (menus) => (
     menus.map(sub => (
       <Menu.Item key={sub.key}>
@@ -89,7 +91,7 @@ class SideMenu extends Component {
           style={theme === 'light' && siderStyle}
           className={theme === 'dark' && 'dark'}
         >
-          <div className="logo">英树官方商城</div>
+          <div className="logo">英树后台</div>
           <Switch
             checked={theme === 'dark'}
             onChange={this.changeTheme}

@@ -3,17 +3,23 @@
 .page {
   // 内容部分
   position: relative;
-  margin: @space-lg @space-base;
+  margin: @space-base @space-base;
   padding: @space-base;
   opacity: 1;
   background: @body-background;
   min-height: 280px;
   overflow: hidden;
+  display: flex;
   > .ant-spin-nested-loading {
+    flex: 1;
     position: static;
     .ant-spin-text {
       letter-spacing: 3px;
       color: @gray;
+    }
+    .ant-spin-container {
+      width: 100%;
+      height: 100%;
     }
     .ant-spin-dot i {
       background-color: @gray;
@@ -25,10 +31,20 @@
       background-color: @body-background;
     }
   }
+  .page-wrapper {
+    width: 100%;
+    height: 100%;
+  }
   .page-header {
   }
   .page-content {
   }
   .page-footer {
+  }
+  .table-list {
+    // 为表格滚动条预留位置
+    .ant-table-scroll {margin-right: -4px;}
+    // 添加滚动条后的表头颜色修改
+    .ant-table-header {background-color: transparent;}
   }
 }
