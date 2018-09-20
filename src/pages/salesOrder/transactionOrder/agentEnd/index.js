@@ -8,6 +8,7 @@ import React, { Component } from 'react'
 
 import { Form, Row, Col, Input, Button, Icon, Table, Divider, Tag } from 'antd'
 import './index.less'
+import { PhotoSwipeGallery } from 'react-photoswipe'
 
 const FormItem = Form.Item
 
@@ -17,18 +18,45 @@ const data = [{
   age: 32,
   address: 'New York No. 1 Lake Park',
   tags: ['nice', 'developer'],
+  items: [
+    {
+      src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+      thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+      w: 1200,
+      h: 900,
+      title: 'Image 1'
+    }
+  ],
 }, {
   key: '2',
   name: 'Jim Green',
   age: 42,
   address: 'London No. 1 Lake Park',
   tags: ['loser'],
+  items: [
+    {
+      src: 'https://farm6.staticflickr.com/5591/15008867125_b61960af01_h.jpg',
+      thumbnail: 'https://farm6.staticflickr.com/5591/15008867125_b61960af01_h.jpg',
+      w: 1200,
+      h: 900,
+      title: 'Image 1'
+    }
+  ],
 }, {
   key: '3',
   name: 'Joe Black',
   age: 32,
   address: 'Sidney No. 1 Lake Park',
   tags: ['cool', 'teacher'],
+  items: [
+    {
+      src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+      thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+      w: 1200,
+      h: 900,
+      title: 'Image 1'
+    }
+  ],
 },
   {
     key: '4',
@@ -36,6 +64,15 @@ const data = [{
     age: 33,
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
   },
   {
     key: '5',
@@ -43,6 +80,15 @@ const data = [{
     age: 34,
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
   },
   {
     key: '6',
@@ -50,12 +96,30 @@ const data = [{
     age: 35,
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
   },
   {
     key: '7',
     name: 'Joe Black',
     age: 32,
     address: 'Sidney No. 1 Lake Park',
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
     tags: ['cool', 'teacher'],
   },
   {
@@ -64,6 +128,15 @@ const data = [{
     age: 32,
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
   },
   {
     key: '9',
@@ -71,6 +144,15 @@ const data = [{
     age: 32,
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
+    items: [
+      {
+        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+        w: 1200,
+        h: 900,
+        title: 'Image 1'
+      }
+    ],
   }
 ]
 
@@ -80,10 +162,57 @@ export default class AgentEnd extends Component {
     super(props)
     this.state = {
       expand: false,
+      isOpen: false,
+      items: [
+        {
+          src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+          thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+          w: 1200,
+          h: 900,
+          title: 'Image 1'
+        },
+        {
+          src: 'https://farm6.staticflickr.com/5591/15008867125_b61960af01_h.jpg',
+          thumbnail: 'https://farm6.staticflickr.com/5591/15008867125_b61960af01_h.jpg',
+          w: 1200,
+          h: 900,
+          title: 'Image 2'
+        },
+        {
+          src: 'https://farm4.staticflickr.com/3902/14985871946_24f47d4b53_h.jpg',
+          thumbnail: 'https://farm4.staticflickr.com/3902/14985871946_24f47d4b53_h.jpg',
+          w: 1200,
+          h: 900,
+          title: 'Image 3'
+        }
+      ],
+      options: {
+        closeOnScroll: false,
+        shareEl: false
+      }
     }
   }
 
+  getThumbnailContent = item => (
+    <img src={item.thumbnail} width={20} height={3} alt=""/>
+  )
+  openPhotoSwipe = (e) => {
+    e.preventDefault()
+    this.setState({
+      isOpen: true
+    })
+  }
+
+  handleClose = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
+  handleBeforeChange = (instance, change) => {
+    console.log('Before change: ', change)
+  }
   columns = () => {
+    const {isOpen, options} = this.state
     return [{
       title: 'Name',
       dataIndex: 'name',
@@ -102,13 +231,23 @@ export default class AgentEnd extends Component {
       width: 150,
     }, {
       title: 'Tags',
-      key: 'tags',
-      dataIndex: 'tags',
-      render: tags => (
-        <span>
-      {tags.map(tag => <Tag color="blue" key={tag}>{tag}</Tag>)}
-    </span>
-      ),
+      key: 'items',
+      dataIndex: 'items',
+      render: items => {
+        return (
+          <div>
+            测试图片
+            <PhotoSwipeGallery
+              items={items}
+              options={options}
+              thumbnailContent={this.getThumbnailContent}
+              isOpen={isOpen}
+              onClose={this.handleClose}
+              beforeChange={this.handleBeforeChange}
+            />
+          </div>
+        )
+      },
       width: 150
     }, {
       title: 'Action',
@@ -186,6 +325,7 @@ export default class AgentEnd extends Component {
           <div className="table-list">
             <Table
               scroll={{y: 400}}
+              // loading={true}
               pagination={{pageSize: 15, total: 300, showSizeChanger: true, showQuickJumper: true}}
               columns={this.columns()}
               dataSource={data}

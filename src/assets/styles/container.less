@@ -17,14 +17,15 @@
   // 没有滚动条的content
   .page-content {flex: 1;overflow: hidden;}
   // 添加滚动条的content:为滚动条预留位置
-  .page-content-scroll {flex: 1;overflow: auto;margin-right: -8px;
-    .table-list {margin-right: 4px;}
+  .page-content-scroll {flex: 1;overflow: auto;margin-right: -@space-sm;
+    .table-list {margin-right: @space-sm/2;}
   }
-  .page-footer {height: 100px;border: 1px solid red;}
+  .page-footer {height: 100px;border: 1px dashed @border-color-split;}
   .table-list {
     // 为表格滚动条预留位置
-    .ant-table-scroll {margin-right: -4px;}
+    .ant-table-scroll {margin-right: -@space-sm/2;}
     // 添加滚动条后的表头颜色修改
     .ant-table-header {background-color: transparent;}
   }
+  .pswp-thumbnails {display: inline-flex;}
 }

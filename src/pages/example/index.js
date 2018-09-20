@@ -9,8 +9,8 @@ export default class Example extends Component {
       isOpen: false,
       items: [
         {
-          src: 'https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg',
-          thumbnail: 'https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg',
+          src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+          thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
           w: 1200,
           h: 900,
           title: 'Image 1'
@@ -58,13 +58,13 @@ export default class Example extends Component {
   }
 
   render () {
-    const {isOpen, items, options} = this.state
+    const {isOpen, items, options, items1} = this.state
     return (
-      <div className="about">
-        <div>
-          <div className="page-header">
-            <h1>Photoswipe</h1>
-          </div>
+      <div className="page-wrapper">
+        <div className="page-header">
+          <h1>Photoswipe</h1>
+        </div>
+        <div className="page-content">
           <PhotoSwipeGallery
             items={items}
             options={options}
@@ -75,6 +75,8 @@ export default class Example extends Component {
           <button type="button" className="btn btn-primary" onClick={this.openPhotoSwipe}>
             Open
           </button>
+        </div>
+        <div className="page-footer">
         </div>
       </div>
     )
