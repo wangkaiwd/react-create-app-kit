@@ -21,9 +21,9 @@
 项目目录结构
 ```
 admin
-├─ .gitignore                   // git忽略文件
-├─ README.md                    // 项目说明文档
-├─ config                       // 配置目录
+├─ .gitignore                       // git忽略文件
+├─ README.md                        // 项目说明文档
+├─ config                           // 配置目录
 │    ├─ env.js
 │    ├─ paths.js
 │    ├─ polyfills.js
@@ -32,35 +32,39 @@ admin
 │    └─ webpackDevServer.config.js
 ├─ package-lock.json
 ├─ package.json
-├─ public                       // index.html模板文件
+├─ public                           // index.html模板文件
 │    ├─ favicon.ico
 │    ├─ index.html
 │    └─ manifest.json
-├─ scripts                      // 构建脚本目录
+├─ scripts                          // 构建脚本目录
 │    ├─ build.js
 │    └─ start.js
-└─ src                          // 项目源码
-       ├─ App.js                // 根组件
+└─ src                              // 项目源码
+       ├─ App.js                    // 根组件
        ├─ App.less
-       ├─ api                   // 后端接口文件
+       ├─ api                       // 后端接口文件
        │    └─ index.js
-       ├─ assets                // 静态资源存放
-       │    ├─ images           // 图片
-       │    └─ styles           // 公共样式
-       ├─ components            // 通用组件
+       ├─ assets                    // 静态资源存放
+       │    ├─ images               // 图片
+       │    └─ styles               // 公共样式
+       │         ├─ container.less  // 页面布局容器
+       │         ├─ mixins.less     // css混合器
+       │         ├─ reset.less      // 重置css样式
+       │         └─ var.less        // 全局变量表
+       ├─ components                // 通用组件
        │    ├─ SideMenu
        │    ├─ TableList
        │    └─ TopHeader
-       ├─ http                  // http请求封装
-       │    ├─ axiosConfig.js
-       │    ├─ serverConfig.js
-       │    └─ tool.js
-       ├─ index.js              // 入口文件
-       ├─ pages                 // 页面文件
+       ├─ http                      // http请求封装
+       │    ├─ axiosConfig.js       // axios配置文件
+       │    ├─ serverConfig.js      // 请求服务配置文件
+       │    └─ tool.js              // 请求相关工具函数
+       ├─ index.js                  // 入口文件
+       ├─ pages                     // 页面文件
        │    ├─ about
        │    ├─ inbox
        │    └─ login
        ├─ registerServiceWorker.js
-       └─ utils                 // 通过方法封装
-              └─ regConfig.js   
+       └─ utils                     // 通过方法封装
+              └─ regConfig.js       // 常用正则配置文件
 ```

@@ -43,7 +43,7 @@ export default class PageContent extends Component {
         <React.Fragment>
           <BreadCrumb/>
           <Content className="page">
-            <Spin tip="LOADING" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
+            <Spin tip="YSADMIN" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
               {this.state.spinning || <Switch>
                 <Route path={`${match.path}/about`} exact component={About}/>
                 <Route path={`${match.path}/inbox`} exact component={Inbox}/>

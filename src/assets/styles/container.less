@@ -1,48 +1,26 @@
 @import "./var";
 
-.page {
-  // 内容部分
-  position: relative;
-  margin: @space-base @space-base;
-  padding: @space-base;
-  opacity: 1;
-  background: @body-background;
-  min-height: 280px;
-  overflow: hidden;
-  display: flex;
-  > .ant-spin-nested-loading {
-    flex: 1;
-    position: static;
-    .ant-spin-text {
-      letter-spacing: 3px;
-      color: @gray;
-    }
-    .ant-spin-container {
-      width: 100%;
-      height: 100%;
-    }
-    .ant-spin-dot i {
-      background-color: @gray;
-    }
-    .ant-spin-blur {
-      opacity: 0;
-    }
-    .ant-spin-spinning {
-      background-color: @body-background;
-    }
+.page {position: relative;margin: @space-base @space-base;padding: @space-base;
+  opacity: 1;background: @body-background;min-height: 280px;
+  overflow: hidden;display: flex;
+  > .ant-spin-nested-loading {flex: 1;position: static;
+    .ant-spin-text {letter-spacing: 3px;color: @gray;}
+    .ant-spin-container {width: 100%;height: 100%;}
+    .ant-spin-dot i {background-color: @gray;}
+    .ant-spin-blur {opacity: 0;}
+    .ant-spin-spinning {background-color: @body-background;}
   }
-  .page-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
+  .page-wrapper {width: 100%;height: 100%;display: flex;flex-direction: column;}
+  .page-header {border: 1px dashed @border-color-split;background-color: @easy-gray;
+    margin-bottom: @space-base;padding: @space-base;
   }
-  .page-header {
+  // 没有滚动条的content
+  .page-content {flex: 1;overflow: hidden;}
+  // 添加滚动条的content:为滚动条预留位置
+  .page-content-scroll {flex: 1;overflow: auto;margin-right: -8px;
+    .table-list {margin-right: 4px;}
   }
-  .page-content {
-    flex: 1;
-  }
-  .page-footer {
-  }
+  .page-footer {height: 100px;border: 1px solid red;}
   .table-list {
     // 为表格滚动条预留位置
     .ant-table-scroll {margin-right: -4px;}
