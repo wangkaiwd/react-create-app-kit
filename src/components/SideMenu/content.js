@@ -44,7 +44,7 @@ export default class PageContent extends Component {
           <BreadCrumb/>
           <Content className="page">
             <Spin tip="LOADING" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
-              <Switch>
+              {this.state.spinning || <Switch>
                 <Route path={`${match.path}/about`} exact component={About}/>
                 <Route path={`${match.path}/inbox`} exact component={Inbox}/>
                 <Route path={`${match.path}/salesOrder/orderSettings`} exact component={OrderSettings}/>
@@ -56,7 +56,7 @@ export default class PageContent extends Component {
                 <Route path={`${match.path}/test/example`} exact component={Example}/>
                 <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
                 <Route component={Page404}/>
-              </Switch>
+              </Switch>}
             </Spin>
           </Content>
         </React.Fragment>

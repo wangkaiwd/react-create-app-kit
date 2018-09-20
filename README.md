@@ -16,6 +16,8 @@
 * `babel-plugin-transform-class-properties`: 支持以箭头函数的形式书写`class`中的方法
 * `webpackbar`: `webpack`打包进度条
 
+点击查看[项目原型图](https://vze48j.axshare.com)
+
 项目目录结构
 ```
 admin

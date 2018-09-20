@@ -24,7 +24,6 @@ export default class index extends Component {
       return this.setState({linkArray: []}, () => this.breadList())
     }
     this.breadList()
-    console.log(this.state.linkArray)
   }
   breadList = () => {
     const {pathname} = this.props.location

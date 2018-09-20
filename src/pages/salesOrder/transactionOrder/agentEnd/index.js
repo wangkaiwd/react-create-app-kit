@@ -119,8 +119,15 @@ export default class AgentEnd extends Component {
   render () {
     return (
       <div className="page-wrapper">
-        <div className="table-list">
-          <Table scroll={{y: 400}} pagination={false} columns={this.columns()} dataSource={data}/>
+        <div className="page-content">
+          <div className="table-list">
+            <Table
+              scroll={{y: 400}}
+              pagination={{pageSize: 15, total: 300}}
+              columns={this.columns()}
+              dataSource={data}
+            />
+          </div>
         </div>
       </div>
     )
