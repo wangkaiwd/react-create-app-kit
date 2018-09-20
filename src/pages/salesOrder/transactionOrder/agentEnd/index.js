@@ -6,11 +6,13 @@
  **/
 import React, { Component } from 'react'
 
-import { Form, Row, Col, Input, Button, Icon, Table, Divider, Tag } from 'antd'
+import { Form, Row, Col, Input, Button, Icon, Table, Divider, Tag, Tabs } from 'antd'
 import './index.less'
 import { PhotoSwipeGallery } from 'react-photoswipe'
+import TabSwitch from '@/components/TabSwitch'
 
 const FormItem = Form.Item
+const TabPane = Tabs.TabPane
 
 const data = [{
   key: '1',
@@ -189,7 +191,8 @@ export default class AgentEnd extends Component {
       options: {
         closeOnScroll: false,
         shareEl: false
-      }
+      },
+      tabConfig: []
     }
   }
 
@@ -201,6 +204,28 @@ export default class AgentEnd extends Component {
     this.setState({
       isOpen: true
     })
+  }
+
+  componentDidMount = () => {
+    let {tabConfig} = this.state
+    tabConfig = [
+      {title: '所有订单', content: this.createTable(data, this.columns())},
+      {title: '待付款', content: this.createTable(data, this.columns())},
+      {title: '待发货(100)', content: this.createTable(data, this.columns())},
+      {title: '待收货(100)', content: this.createTable(data, this.columns())},
+    ]
+    this.setState({tabConfig})
+  }
+  createTable = (data, columns) => {
+    return (<div className="table-list">
+      <Table
+        scroll={{y: 400}}
+        // loading={true}
+        pagination={{pageSize: 15, total: 300, showSizeChanger: true, showQuickJumper: true}}
+        columns={columns}
+        dataSource={data}
+      />
+    </div>)
   }
 
   handleClose = () => {
@@ -280,9 +305,9 @@ export default class AgentEnd extends Component {
     const count = this.state.expand ? 10 : 6
     const {getFieldDecorator} = this.props.form
     const children = []
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 3; i++) {
       children.push(
-        <Col span={8} key={i} style={{display: i < count ? 'block' : 'none'}}>
+        <Col span={6} key={i} style={{display: i < count ? 'block' : 'none'}}>
           <FormItem label={`Field ${i}`}>
             {getFieldDecorator(`field-${i}`, {
               rules: [{
@@ -299,6 +324,10 @@ export default class AgentEnd extends Component {
     return children
   }
 
+  callback = (key) => {
+    console.log(key)
+  }
+
   render () {
     return (
       <div className="page-wrapper transaction-order">
@@ -307,34 +336,23 @@ export default class AgentEnd extends Component {
             className="top-search-form"
             onSubmit={this.handleSearch}
           >
-            <Row gutter={24}>{this.getFields()}</Row>
-            <Row>
-              <Col span={24} style={{textAlign: 'right'}}>
-                <Button type="primary" htmlType="submit">Search</Button>
+            <Row gutter={12}>
+              {this.getFields()}
+              <Col span={6} style={{textAlign: 'right'}}>
+                <Button type="primary" htmlType="submit">搜索</Button>
                 <Button style={{marginLeft: 8}} onClick={this.handleReset}>
-                  Clear
+                  重置
                 </Button>
-                <a style={{marginLeft: 8, fontSize: 12}} onClick={this.toggle}>
-                  Collapse <Icon type={this.state.expand ? 'up' : 'down'}/>
-                </a>
               </Col>
             </Row>
           </Form>
         </div>
         <div className="page-content-scroll">
-          <div className="table-list">
-            <Table
-              scroll={{y: 400}}
-              // loading={true}
-              pagination={{pageSize: 15, total: 300, showSizeChanger: true, showQuickJumper: true}}
-              columns={this.columns()}
-              dataSource={data}
-            />
-          </div>
+          <TabSwitch tabConfig={this.state.tabConfig}/>
         </div>
-        <div className="page-footer">
+        {/*<div className="page-footer">*/}
 
-        </div>
+        {/*</div>*/}
       </div>
     )
   }
