@@ -76,86 +76,86 @@ const data = [{
       }
     ],
   },
-  {
-    key: '5',
-    name: 'Joe Black',
-    age: 34,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-    items: [
-      {
-        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        w: 1200,
-        h: 900,
-        title: 'Image 1'
-      }
-    ],
-  },
-  {
-    key: '6',
-    name: 'Joe Black',
-    age: 35,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-    items: [
-      {
-        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        w: 1200,
-        h: 900,
-        title: 'Image 1'
-      }
-    ],
-  },
-  {
-    key: '7',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    items: [
-      {
-        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        w: 1200,
-        h: 900,
-        title: 'Image 1'
-      }
-    ],
-    tags: ['cool', 'teacher'],
-  },
-  {
-    key: '8',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-    items: [
-      {
-        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        w: 1200,
-        h: 900,
-        title: 'Image 1'
-      }
-    ],
-  },
-  {
-    key: '9',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-    items: [
-      {
-        src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
-        w: 1200,
-        h: 900,
-        title: 'Image 1'
-      }
-    ],
-  }
+  // {
+  //   key: '5',
+  //   name: 'Joe Black',
+  //   age: 34,
+  //   address: 'Sidney No. 1 Lake Park',
+  //   tags: ['cool', 'teacher'],
+  //   items: [
+  //     {
+  //       src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       w: 1200,
+  //       h: 900,
+  //       title: 'Image 1'
+  //     }
+  //   ],
+  // },
+  // {
+  //   key: '6',
+  //   name: 'Joe Black',
+  //   age: 35,
+  //   address: 'Sidney No. 1 Lake Park',
+  //   tags: ['cool', 'teacher'],
+  //   items: [
+  //     {
+  //       src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       w: 1200,
+  //       h: 900,
+  //       title: 'Image 1'
+  //     }
+  //   ],
+  // },
+  // {
+  //   key: '7',
+  //   name: 'Joe Black',
+  //   age: 32,
+  //   address: 'Sidney No. 1 Lake Park',
+  //   items: [
+  //     {
+  //       src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       w: 1200,
+  //       h: 900,
+  //       title: 'Image 1'
+  //     }
+  //   ],
+  //   tags: ['cool', 'teacher'],
+  // },
+  // {
+  //   key: '8',
+  //   name: 'Joe Black',
+  //   age: 32,
+  //   address: 'Sidney No. 1 Lake Park',
+  //   tags: ['cool', 'teacher'],
+  //   items: [
+  //     {
+  //       src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       w: 1200,
+  //       h: 900,
+  //       title: 'Image 1'
+  //     }
+  //   ],
+  // },
+  // {
+  //   key: '9',
+  //   name: 'Joe Black',
+  //   age: 32,
+  //   address: 'Sidney No. 1 Lake Park',
+  //   tags: ['cool', 'teacher'],
+  //   items: [
+  //     {
+  //       src: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       thumbnail: 'https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg',
+  //       w: 1200,
+  //       h: 900,
+  //       title: 'Image 1'
+  //     }
+  //   ],
+  // }
 ]
 
 @Form.create()

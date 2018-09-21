@@ -1,4 +1,5 @@
 ## react后台管理系统
+### 1. 项目介绍
 项目技术栈： [`react:16.5`](https://react.docschina.org/)+ 
 [`react-router v4`](https://reacttraining.com/react-router/web/guides/philosophy) + 
 [`ant design`](https://ant.design/index-cn)
@@ -68,3 +69,36 @@ admin
        └─ utils                     // 通过方法封装
               └─ regConfig.js       // 常用正则配置文件
 ```
+
+### 2. 项目样式管理
+公共样式：  
+* `reset`: 样式重置及设置默认值，项目中使用了`github`的[`minnireset.css`](https://jgthms.com/minireset.css/)
+* `var`: 存放`less`变量，主要包括颜色、字体、边距等，在项目中的`css`相关内容要使用`var`中定
+义的变量，这样可以保证样式统一，并且方便后期的主题和相关样式修改
+* `mixin`: 可复用的样式片段，包括清除浮动、圆角边框、文本溢出省略、文本强制换行等
+* `container`: 将所有容器的样式提取到一个文件中，这样可以避免样式污染，提高代码复用性，在项目
+开始之前，前端开发人员集中对页面进行统一分析，分解为模块并命名
+    ```less
+    // 带有scroll类名的是为了兼容滚动条
+    .page {
+      .page-wrapper {
+        .page-header {
+      
+        }
+        .page-content-scroll {
+        
+        }
+        .page-footer {
+      
+        }
+      }
+      // 表格使用样式
+      .table-list {
+    
+      }
+    }
+    ```
+    之后随着项目的开发会在这个基础上进行一个扩展
+
+**在修改公共样式的时候一定要与其它开发人员确认，防止重名，造成样式冲突，也可以让其他开发人员指导
+你添加了新的公用模块，方便调用** 
