@@ -12,10 +12,10 @@ import TransactionMember from '@/pages/salesOrder/transactionOrder/memberEnd'
 import { Layout, Spin } from 'antd'
 import BreadCrumb from '@/components/BreadCrumb'
 
-const {Content} = Layout
+const { Content } = Layout
 @withRouter
 export default class PageContent extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       spinning: true
@@ -29,33 +29,33 @@ export default class PageContent extends Component {
   }
   componentWillReceiveProps = (nextProps) => {
     if (this.props.location.pathname !== nextProps.location.pathname) {
-      this.setState({spinning: true})
+      this.setState({ spinning: true })
     }
   }
   setLoading = () => {
-    setTimeout(() => this.setState({spinning: false}), 500)
+    setTimeout(() => this.setState({ spinning: false }), 300)
   }
 
-  render () {
-    const {match} = this.props
+  render() {
+    const { match } = this.props
     return (
       <Router>
         <React.Fragment>
-          <BreadCrumb/>
+          <BreadCrumb />
           <Content className="page">
             <Spin tip="YSADMIN" wrapperClassName="loading-wrap" spinning={this.state.spinning} size={'large'}>
               {this.state.spinning || <Switch>
-                <Route path={`${match.path}/about`} exact component={About}/>
-                <Route path={`${match.path}/inbox`} exact component={Inbox}/>
-                <Route path={`${match.path}/salesOrder/orderSettings`} exact component={OrderSettings}/>
-                <Route path={`${match.path}/salesOrder/refundOrder/agentEnd`} exact component={RefundOrderAgent}/>
-                <Route path={`${match.path}/salesOrder/refundOrder/memberEnd`} exact component={RefundOrderMember}/>
-                <Route path={`${match.path}/salesOrder/transactionOrder/agentEnd`} exact component={TransactionAgent}/>
+                <Route path={`${match.path}/about`} exact component={About} />
+                <Route path={`${match.path}/inbox`} exact component={Inbox} />
+                <Route path={`${match.path}/salesOrder/orderSettings`} exact component={OrderSettings} />
+                <Route path={`${match.path}/salesOrder/refundOrder/agentEnd`} exact component={RefundOrderAgent} />
+                <Route path={`${match.path}/salesOrder/refundOrder/memberEnd`} exact component={RefundOrderMember} />
+                <Route path={`${match.path}/salesOrder/transactionOrder/agentEnd`} exact component={TransactionAgent} />
                 <Route path={`${match.path}/salesOrder/transactionOrder/memberEnd`} exact
-                       component={TransactionMember}/>
-                <Route path={`${match.path}/test/example`} exact component={Example}/>
-                <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`}/>
-                <Route component={Page404}/>
+                  component={TransactionMember} />
+                <Route path={`${match.path}/test/example`} exact component={Example} />
+                <Redirect from={`${match.path}`} exact to={`${match.path}/test/example`} />
+                <Route component={Page404} />
               </Switch>}
             </Spin>
           </Content>

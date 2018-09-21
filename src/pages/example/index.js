@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import 'react-photoswipe/lib/photoswipe.css'
 import { PhotoSwipeGallery } from 'react-photoswipe'
-
+import { Button } from 'antd'
+@withRouter
 export default class Example extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       isOpen: false,
@@ -38,7 +40,7 @@ export default class Example extends Component {
   }
 
   getThumbnailContent = item => (
-    <img src={item.thumbnail} width={120} height={90} alt=""/>
+    <img src={item.thumbnail} width={120} height={90} alt="" />
   )
 
   openPhotoSwipe = (e) => {
@@ -57,8 +59,8 @@ export default class Example extends Component {
     console.log('Before change: ', change)
   }
 
-  render () {
-    const {isOpen, items, options, items1} = this.state
+  render() {
+    const { isOpen, items, options, items1 } = this.state
     return (
       <div className="page-wrapper">
         <div className="page-header">
@@ -77,6 +79,7 @@ export default class Example extends Component {
           </button>
         </div>
         <div className="page-footer">
+          <Button type="primary" onClick={() => this.props.history.push('/home/salesOrder/transactionOrder/agentEnd')}>跳转</Button>
         </div>
       </div>
     )
