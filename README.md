@@ -1,5 +1,21 @@
 ## react后台管理系统
-### 1. 项目介绍
+### 1. 快速开始
+克隆项目文件：
+```
+git clone git@github.com:wangkaiwd/react-create-app-kit.git
+```
+
+进入目录安装依赖：
+```
+// 安装前最好使用淘宝镜像，可以使用[`nrm`](https://cnodejs.org/topic/5326e78c434e04172c006826)进行`npm`源管理
+npm i
+```
+开发：
+```
+npm start
+// 打开 http://localhost:3000/
+```
+### 2. 项目介绍
 项目技术栈： [`react:16.5`](https://react.docschina.org/)+ 
 [`react-router v4`](https://reacttraining.com/react-router/web/guides/philosophy) + 
 [`ant design`](https://ant.design/index-cn)
@@ -70,7 +86,7 @@ admin
               └─ regConfig.js       // 常用正则配置文件
 ```
 
-### 2. 项目样式管理
+### 3. 项目样式管理
 公共样式：  
 * `reset`: 样式重置及设置默认值，项目中使用了`github`的[`minnireset.css`](https://jgthms.com/minireset.css/)
 * `var`: 存放`less`变量，主要包括颜色、字体、边距等，在项目中的`css`相关内容要使用`var`中定
