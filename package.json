@@ -51,6 +51,8 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpackbar": "^2.6.3"
   },
   "babel": {

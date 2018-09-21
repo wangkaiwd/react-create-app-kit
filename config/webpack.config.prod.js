@@ -2,6 +2,8 @@
 
 const autoprefixer = require('autoprefixer')
 const WebpackBar = require('webpackbar')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -153,7 +155,6 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
               compact: true,
             },
           },
@@ -261,6 +262,10 @@ module.exports = {
     // in `package.json`, in which case it will be the pathname of that URL.
     new InterpolateHtmlPlugin(env.raw),
     // Generates an `index.html` file with the <script> injected.
+    // 打包分析
+    new BundleAnalyzerPlugin(),
+    // 打包前清空build目录
+    new CleanWebpackPlugin('build'),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,

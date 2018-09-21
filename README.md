@@ -32,6 +32,8 @@ npm start
 * `babel-plugin-transform-decorators-legacy`: 支持装饰器语法
 * `babel-plugin-transform-class-properties`: 支持以箭头函数的形式书写`class`中的方法
 * `webpackbar`: `webpack`打包进度条
+* `webpack-bundle-analyzer`: `webpack`打包性能分析，方便看到资源占用
+* `clean-webpack-plugin`: 每次打包之前将`build`目录下的文件都清空，然后再把打包好的文件放进去
 
 点击查看[项目原型图](https://vze48j.axshare.com)
 
