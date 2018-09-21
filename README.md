@@ -6,8 +6,8 @@ git clone git@github.com:wangkaiwd/react-create-app-kit.git
 ```
 
 进入目录安装依赖：
+> 安装前最好使用淘宝镜像，可以使用[`nrm`](https://cnodejs.org/topic/5326e78c434e04172c006826)进行`npm`源管理
 ```
-// 安装前最好使用淘宝镜像，可以使用[`nrm`](https://cnodejs.org/topic/5326e78c434e04172c006826)进行`npm`源管理
 npm i
 ```
 开发：
