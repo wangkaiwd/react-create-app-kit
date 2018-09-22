@@ -93,6 +93,7 @@ class SideMenu extends Component {
       </Menu.Item>
     ))
   )
+  // 改变主题
   changeTheme = (value) => {
     this.setState(
       {theme: value ? 'dark' : 'light'},
@@ -100,6 +101,7 @@ class SideMenu extends Component {
     )
   }
 
+  // 菜单被选中
   onSelect = ({selectedKeys}) => {
     this.setState({defaultSelectedKeys: selectedKeys})
   }
