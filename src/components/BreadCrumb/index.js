@@ -41,6 +41,7 @@ export default class index extends Component {
   uniqueArray = (subItem, path) => {
     const obj = {path, title: subItem.title}
     const {linkArray} = this.state
+    console.log(linkArray)
     let bool = true
     linkArray.forEach(one => {
       if (one.path === obj.path) {
@@ -50,7 +51,6 @@ export default class index extends Component {
     bool && linkArray.push(obj)
     this.setState({linkArray})
   }
-  // fixme: 根据有没有options和children以及其它情况进行分裂，之后可以进行优化
   // 面包屑列表和侧边栏进行比较
   compareLink = (menuList, path) => {
     menuList.forEach(subItem => {
