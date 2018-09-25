@@ -2,30 +2,30 @@
 
 const leftMenuList = [
   {
-    key: '/home/test', text: '测试1', icon: 'form',
-    options: [
-      { key: '/home/test/example', text: '测试1-1', icon: 'clock-circle' }
+    key: '/home/test', title: '测试1', icon: 'form',
+    children: [
+      { key: '/home/test/example', title: '测试1-1', icon: 'clock-circle' }
     ],
   },
   {
-    key: '/home/salesOrder', text: '商城销售订单', icon: 'copy',
+    key: '/home/salesOrder', title: '商城销售订单', icon: 'copy',
     children: [
       {
-        key: '/home/salesOrder/transactionOrder', text: '交易订单',
-        options: [
-          { key: '/home/salesOrder/transactionOrder/agentEnd', text: '代理端', },
-          { key: '/home/salesOrder/transactionOrder/memberEnd', text: '会员端', }
+        key: '/home/salesOrder/transactionOrder', title: '交易订单',
+        children: [
+          { key: '/home/salesOrder/transactionOrder/agentEnd', title: '代理端', },
+          { key: '/home/salesOrder/transactionOrder/memberEnd', title: '会员端', }
         ],
       },
       {
-        key: '/home/salesOrder/refundOrder', text: '退款订单',
-        options: [
-          { key: '/home/salesOrder/refundOrder/agentEnd', text: '代理端', },
-          { key: '/home/salesOrder/refundOrder/memberEnd', text: '会员端', }
+        key: '/home/salesOrder/refundOrder', title: '退款订单',
+        children: [
+          { key: '/home/salesOrder/refundOrder/agentEnd', title: '代理端', },
+          { key: '/home/salesOrder/refundOrder/memberEnd', title: '会员端', }
         ],
       },
       {
-        key: '/home/salesOrder/orderSettings', text: '订单设置'
+        key: '/home/salesOrder/orderSettings', title: '订单设置'
       }
     ]
   },

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import SideMenu from '@/components/SideMenu'
 import Login from '@/pages/login'
-import './App.less'
+import './admin.less'
 // 权限验证函数
 const auth = () => {
   const user = [{name: 'admin', password: '123456'}]
@@ -22,7 +22,7 @@ const PrivateRoute = ({component: Component, ...rest}) => (
   />
 )
 
-class App extends Component {
+class Admin extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -44,4 +44,4 @@ class App extends Component {
 
 }
 
-export default App
+export default Admin

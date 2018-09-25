@@ -58,7 +58,7 @@ admin
 │    ├─ build.js
 │    └─ start.js
 └─ src                              // 项目源码
-       ├─ App.js                    // 根组件
+       ├─ admin.js                    // 根组件
        ├─ App.less
        ├─ api                       // 后端接口文件
        │    └─ index.js

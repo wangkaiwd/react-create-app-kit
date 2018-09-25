@@ -39,7 +39,7 @@ export default class index extends Component {
 
   // 面包屑列表去重
   uniqueArray = (subItem, path) => {
-    const obj = {path, text: subItem.text}
+    const obj = {path, title: subItem.title}
     const {linkArray} = this.state
     let bool = true
     linkArray.forEach(one => {
@@ -54,20 +54,13 @@ export default class index extends Component {
   // 面包屑列表和侧边栏进行比较
   compareLink = (menuList, path) => {
     menuList.forEach(subItem => {
-      if (subItem.options) {
-        if (subItem.key === path) {
-          this.uniqueArray(subItem, path)
-        }
-        this.compareLink(subItem.options, path)
-      }
-      else if (subItem.children) {
+      if (subItem.children) {
         if (subItem.key === path) {
           this.uniqueArray(subItem, path)
           this.uniqueArray(subItem.children, path)
         }
         this.compareLink(subItem.children, path)
-      }
-      else {
+      } else {
         if (subItem.key === path) {
           this.uniqueArray(subItem, path)
         }
@@ -80,7 +73,7 @@ export default class index extends Component {
     return (
       <div className="bread-crumb">
         <Breadcrumb>
-          {linkArray.map(item => <Breadcrumb.Item key={item.path}>{item.text}</Breadcrumb.Item>)}
+          {linkArray.map(item => <Breadcrumb.Item key={item.path}>{item.title}</Breadcrumb.Item>)}
         </Breadcrumb>
       </div>
     )
