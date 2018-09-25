@@ -41,7 +41,6 @@ export default class index extends Component {
   uniqueArray = (subItem, path) => {
     const obj = {path, title: subItem.title}
     const {linkArray} = this.state
-    console.log(linkArray)
     let bool = true
     linkArray.forEach(one => {
       if (one.path === obj.path) {

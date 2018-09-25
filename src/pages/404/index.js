@@ -5,8 +5,7 @@
  * @Desc: 404page
  **/
 import React, { Component } from 'react'
-import { Button } from 'antd'
-import img404 from 'images/404.png'
+// import img404 from '/assets/images/404.png'
 import 'animate.css'
 import './index.less'
 import { withRouter } from 'react-router-dom'
@@ -28,7 +27,8 @@ export default class NotFound extends Component {
     return (
       <div className="page-404">
         <div className="img404">
-          <img src={img404} alt="404" className={`animated wobble ${this.state.animated}`} onMouseEnter={this.enter}/>
+          <img src="/assets/images/404.png" alt="404" className={`animated wobble ${this.state.animated}`}
+               onMouseEnter={this.enter}/>
         </div>
       </div>
     )
