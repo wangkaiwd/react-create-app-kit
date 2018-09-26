@@ -34,7 +34,6 @@ npm start
 * `webpack-bundle-analyzer`: `webpack`打包性能分析，方便看到资源占用
 * `clean-webpack-plugin`: 每次打包之前将`build`目录下的文件都清空，然后再把打包好的文件放进去
 
-点击查看[项目原型图](https://vze48j.axshare.com)
 
 项目目录结构
 ```
