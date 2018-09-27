@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import SideMenu from '@/components/SideMenu'
 import Login from '@/pages/login'
-import './admin.less'
+import style from './admin.less'
 // 权限验证函数
 const auth = () => {
   const user = [{name: 'admin', password: '123456'}]
@@ -31,7 +31,7 @@ class Admin extends Component {
   render () {
     return (
       <Router>
-        <div className="container">
+        <div className={style.container}>
           <Switch>
             <PrivateRoute path="/home" component={SideMenu}/>
             <Route path="/login" component={Login}/>

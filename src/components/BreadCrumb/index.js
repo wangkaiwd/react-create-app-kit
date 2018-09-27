@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 import { Breadcrumb } from 'antd'
 import { withRouter } from 'react-router-dom'
 import leftMenuList from '@/components/SideMenu/config'
-import './index.less'
+import style from './index.less'
 
 @withRouter
 export default class index extends Component {
@@ -70,7 +70,7 @@ export default class index extends Component {
   render () {
     const {linkArray} = this.state
     return (
-      <div className="bread-crumb">
+      <div className={style['bread-crumb']}>
         <Breadcrumb>
           {linkArray.map(item => <Breadcrumb.Item key={item.path}>{item.title}</Breadcrumb.Item>)}
         </Breadcrumb>

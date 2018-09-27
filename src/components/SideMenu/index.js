@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { Layout, Menu, Icon, Switch } from 'antd'
 
-import './index.less'
+import style from './index.less'
 import leftMenuList from './config'
 import TopHeader from '../TopHeader'
 import PageContent from './content'
@@ -99,13 +99,13 @@ class SideMenu extends Component {
   render () {
     const {collapsed, menuTreeNode, defaultSelectedKeys, openKeys} = this.state
     return (
-      <Layout className="side-menu-component">
+      <Layout className={style['side-menu-component']}>
         <Sider
           trigger={null}
           collapsible
           collapsed={collapsed}
         >
-          <div className="logo">英树后台</div>
+          <div className={style.logo}>英树后台</div>
           <Menu
             theme="dark"
             mode="inline"
