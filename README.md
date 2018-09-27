@@ -57,17 +57,15 @@ admin
 │    ├─ build.js
 │    └─ start.js
 └─ src                              // 项目源码
-       ├─ admin.js                    // 根组件
-       ├─ App.less
+       ├─ admin.js                  // 根组件
+       ├─ admin.less
        ├─ api                       // 后端接口文件
        │    └─ index.js
-       ├─ assets                    // 静态资源存放
-       │    ├─ images               // 图片
-       │    └─ styles               // 公共样式
-       │         ├─ container.less  // 页面布局容器
-       │         ├─ mixins.less     // css混合器
-       │         ├─ reset.less      // 重置css样式
-       │         └─ var.less        // 全局变量表
+       │─ styles                    // 公共样式
+       │    ├─ container.less       // 页面布局容器
+       │    ├─ mixins.less          // css混合器
+       │    ├─ reset.less           // 重置css样式
+       │    └─ var.less             // 全局变量表
        ├─ components                // 通用组件
        │    ├─ SideMenu
        │    ├─ TableList
@@ -119,3 +117,31 @@ admin
 
 **在修改公共样式的时候一定要与其它开发人员确认，防止重名，造成样式冲突，也可以让其他开发人员知道
 你添加了新的公用模块，方便调用** 
+
+局部组件样式：
+> 通过[`css-modules`](https://github.com/css-modules/css-modules)来进行组件样式书写，防止样式冲突
+
+使用`css-modules`后，相当于给每个`class`名外加了一个`:local`,以此来实现样式的局部化，如果要设置全局样式，
+使用对应的`:global`
+```css
+.normal { color: green; }
+
+/*与下面等价*/
+:local(.normal) { color: green; }
+
+/* 定义全局样式 */
+:global(.btn) {
+  color: red;
+}
+
+/* 定义多个全局样式 */
+:global {
+  .link {
+    color: green;
+  }
+  .box {
+    color: yellow;
+  }
+}
+```
+
