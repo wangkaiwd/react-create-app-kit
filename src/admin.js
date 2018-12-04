@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SideMenu from '@/layout'
+import SideMenu from '@/layout/SideMenu'
 class Admin extends Component {
   render() {
     return (
