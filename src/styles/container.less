@@ -1,37 +1,3 @@
-@import "var";
-
+@import "vars";
 // 整体页面样式结构：.page->.page-wrapper->.page-header ->.page-content->.page-footer
-:global {
-  .page {position: relative;margin: @space-base @space-base;padding: @space-base;
-    opacity: 1;background: @body-background;min-height: 280px;
-    overflow: hidden;display: flex;
-    // ant spin 组件样式设置
-    > .ant-spin-nested-loading {flex: 1;position: static;
-      .ant-spin-text {letter-spacing: 3px;color: @gray;}
-      .ant-spin-container {width: 100%;height: 100%;}
-      .ant-spin-dot i {background-color: @gray;}
-      .ant-spin-blur {opacity: 0;}
-      .ant-spin-spinning {background-color: @body-background;}
-    }
-    .page-wrapper {width: 100%;height: 100%;display: flex;flex-direction: column;}
-    .page-header {border: 1px dashed @border-color-split;background-color: @easy-gray;
-      margin-bottom: @space-base;padding: @space-base;
-    }
-    // 没有滚动条的content，一般情况下还是要使用有滚动条的样式，防止内容超出
-    .page-content, .page-content-scroll {flex: 1;overflow: hidden;margin-bottom: @space-base;}
-    // 添加滚动条的content:为滚动条预留位置
-    .page-content-scroll {margin-right: -@space-sm;overflow: scroll;
-      .table-list, .ant-tabs-bar {margin-right: @space-sm/2;}
-    }
-    .page-footer {height: 100px;border: 1px dashed @border-color-split;}
-    .table-list {
-      // 为表格滚动条预留位置
-      .ant-table-scroll {margin-right: -@space-sm/2;}
-      // 添加滚动条后的表头颜色修改
-      .ant-table-header {background-color: transparent;}
-      .ant-pagination-options-quick-jumper input {margin-right: 0;}
-    }
-    // 画廊组件的小图横着排列
-    .pswp-thumbnails {display: inline-flex;}
-  }
-}
+:global {}
