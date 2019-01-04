@@ -1,9 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Admin from './admin'
-import registerServiceWorker from './registerServiceWorker'
-import 'styles/reset.less'
-import 'styles/container.less'
+/* eslint-disable */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import "styles/reset"
+import store from 'store'
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<Admin />, document.getElementById('root'))
-registerServiceWorker()
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();

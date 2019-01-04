@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-class SideMenu extends Component {
+class Login extends Component {
   render() {
     return (
       <div>
-        
-        SideMenu
+        登录页面
       </div>
     );
   }
 }
 
-export default SideMenu;
+export default Login;
