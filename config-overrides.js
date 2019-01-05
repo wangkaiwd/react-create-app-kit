@@ -1,7 +1,10 @@
 const path = require('path')
 const { injectBabelPlugin } = require('react-app-rewired');
+const rewireEslint = require('react-app-rewire-eslint');
+function overrideEslintOptions(options) {
+  return options;
+}
 module.exports = function override(config, env) {
-  config.module.rules = config.module.rules.slice(1)
   config.resolve = {
     alias: { // 别名
       '@': path.resolve(__dirname, 'src/'),
@@ -21,5 +24,6 @@ module.exports = function override(config, env) {
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],
     config
   )
+  config = rewireEslint(config, env, overrideEslintOptions);
   return config
 }
