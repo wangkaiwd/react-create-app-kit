@@ -2,11 +2,16 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import Login from '../login'
 import Admin from '../admin'
+import Home from 'pages/home'
 export default () => (
   <Router>
     <Switch>
       <Route path="/login" component={Login} />
-      <Route path="/admin" component={Admin} />
+      <Route path="/admin" render={() => (
+        <Admin>
+          <Route path="/admin/home" component={Home} />
+        </Admin>
+      )} />
       <Redirect from='/' to='/login' />
     </Switch>
   </Router>
