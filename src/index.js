@@ -1,11 +1,16 @@
-/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Page from '@/app/router';
 import * as serviceWorker from './serviceWorker';
 import "styles/reset"
 import store from 'store'
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from 'react-redux'
+ReactDOM.render(
+  <Provider store={store}>
+    <Page />
+  </Provider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

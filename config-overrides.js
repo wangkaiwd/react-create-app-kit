@@ -1,6 +1,7 @@
 const path = require('path')
 const { injectBabelPlugin } = require('react-app-rewired');
 module.exports = function override(config, env) {
+  config.module.rules = config.module.rules.slice(1)
   config.resolve = {
     alias: { // 别名
       '@': path.resolve(__dirname, 'src/'),
