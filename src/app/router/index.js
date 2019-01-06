@@ -8,6 +8,7 @@ import Home from 'pages/home'
 import FormDemo from 'pages/form'
 import ListDemo from 'pages/list'
 import DetailDemo from 'pages/detail'
+
 export default () => (
   <Router>
     <Switch>

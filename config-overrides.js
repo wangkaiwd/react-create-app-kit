@@ -1,4 +1,5 @@
 const path = require('path')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // babel plugin
 const { injectBabelPlugin } = require('react-app-rewired');
 // eslint config
@@ -30,7 +31,13 @@ module.exports = function override(config, env) {
     ],
     config
   )
-  confgi = injectBabelPlugin(["@babel/plugin-proposal-decorators", { legacy: true }], config)
+  config = injectBabelPlugin(["@babel/plugin-proposal-decorators", { legacy: true }], config)
   config = rewireEslint(config, env, overrideEslintOptions);
+  if (!config.plugins) {
+    config.plugins = [];
+  }
+  if (process.env.NODE_ENV === 'production') {
+    config.plugins.push(new BundleAnalyzerPlugin());
+  }
   return config
 }
