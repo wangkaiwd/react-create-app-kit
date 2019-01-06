@@ -1,0 +1,39 @@
+.myEnter {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.myEnterActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 1s;
+}
+
+.myEnterDone {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.myExit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.myExitActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.myExitDone {
+  opacity: 0;
+  transform: translate(100px)
+}

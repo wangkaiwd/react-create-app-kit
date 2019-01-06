@@ -26,6 +26,7 @@ class Home extends Component {
             loading={<Loading />}
             plugins={['ToolBar']}
             zoomEnable={zoomEnable}
+            zoom={20}
           />
         </div>
         <Button onClick={this.toggleZoom}>{tip}</Button>

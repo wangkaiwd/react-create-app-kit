@@ -35,9 +35,9 @@
     overflow-y: scroll;
   }
   .contents {
+    position: relative;
     margin: 24px 24px 0;
     flex-shrink: 0;
-    display: flex;
   }
   @keyframes circleRotate {
     0% {
