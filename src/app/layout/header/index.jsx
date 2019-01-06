@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-import { Layout, Menu } from 'antd'
+import { Layout, Icon } from 'antd'
 import styles from './index.module.scss'
 const { Header } = Layout;
 class MyHeader extends Component {
   render() {
+    const { collapsed, toggleTrigger } = this.props
     return (
       <Header className={styles.header}>
-        <div className={styles.logo} />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          className={styles.menu}
-        >
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
+        <Icon
+          className={styles.trigger}
+          type={collapsed ? 'menu-unfold' : 'menu-fold'}
+          onClick={toggleTrigger}
+        />
       </Header>
     );
   }

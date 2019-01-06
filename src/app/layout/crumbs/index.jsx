@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
-import { Breadcrumb } from 'antd'
+import { Breadcrumb, Row, Col } from 'antd'
 import styles from './index.module.scss'
 class Crumbs extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.crumbsHeader}>
         <Breadcrumb className={styles.crumbs}>
           <Breadcrumb.Item>
             <Link to="/login">
@@ -19,8 +19,10 @@ class Crumbs extends Component {
             <Link to="/admin/home">Home</Link>
           </Breadcrumb.Item>
         </Breadcrumb>
-        <div>高级表单</div>
-        <div>高级表单常见于一次性输入和提交大批量数据的场景。</div>
+        <Row>
+          <Col className={styles.crumbsTitle}>高级表单</Col>
+          <Col className={styles.crumbsDetail}>高级表单常见于一次性输入和提交大批量数据的场景</Col>
+        </Row>
       </div>
     );
   }

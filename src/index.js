@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Page from '@/app/router';
 import * as serviceWorker from './serviceWorker';
 import "styles/reset"
+import "styles/theme"
 import store from 'store'
 import { Provider } from 'react-redux'
 ReactDOM.render(

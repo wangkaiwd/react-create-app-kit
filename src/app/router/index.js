@@ -9,7 +9,10 @@ export default () => (
       <Route path="/login" component={Login} />
       <Route path="/admin" render={() => (
         <Admin>
-          <Route path="/admin/home" component={Home} />
+          <Switch>
+            <Route path="/admin/home" component={Home} />
+            <Redirect from="/admin" to="/admin/home" />
+          </Switch>
         </Admin>
       )} />
       <Redirect from='/' to='/login' />

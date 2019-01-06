@@ -4,44 +4,55 @@ import {
   Icon
 } from 'antd';
 import styles from './index.module.scss';
-
+import menuData from './menuData'
 const { SubMenu } = Menu;
 class SideMenu extends Component {
+  state = {
+    menuData: []
+  }
+  componentDidMount = () => {
+    this.initMenu()
+  }
+  initMenu = () => {
+    const list = this.renderMenu(menuData)
+    this.setState({ menuData: list })
+  }
+  getIcon = item => item.icon && <Icon type={item.icon} />
+  renderMenu = (menuData) => {
+    return menuData.map(menu => {
+      if (menu.children) { return this.menuChildren(menu) }
+      return this.menuItem(menu)
+    })
+  }
+  menuChildren = (subItem) => {
+    return (
+      <SubMenu
+        key={subItem.key}
+        title={
+          <span>
+            {this.getIcon(subItem)}<span>{subItem.title}</span>
+          </span>
+        }>
+        {this.renderMenu(subItem.children)}
+      </SubMenu>
+    )
+  }
+  menuItem = item => <Menu.Item key={item.key}>
+    {this.getIcon(item)}
+    <span>
+      {item.title}
+    </span>
+  </Menu.Item>
   render() {
+    const { menuData } = this.state
     return (
       <Menu
         mode="inline"
         theme={'dark'}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
-        className={styles.menu}
       >
-        <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-          <Menu.Item key="1">option1</Menu.Item>
-          <Menu.Item key="2">option2</Menu.Item>
-          <Menu.Item key="3">option3</Menu.Item>
-          <Menu.Item key="4">option4</Menu.Item>
-        </SubMenu>
-        <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
-          <Menu.Item key="5">option5</Menu.Item>
-          <Menu.Item key="6">option6</Menu.Item>
-          <Menu.Item key="7">option7</Menu.Item>
-          <Menu.Item key="8">option8</Menu.Item>
-        </SubMenu>
-        <SubMenu key="sub3" title={<span><Icon type="notification" />subnav 3</span>}>
-          <Menu.Item key="9">option9</Menu.Item>
-          <Menu.Item key="10">option10</Menu.Item>
-          <Menu.Item key="11">option11</Menu.Item>
-          <Menu.Item key="12">option12</Menu.Item>
-          <Menu.Item key="13">option9</Menu.Item>
-          <Menu.Item key="14">option10</Menu.Item>
-          <Menu.Item key="15">option11</Menu.Item>
-          <Menu.Item key="16">option12</Menu.Item>
-          <Menu.Item key="17">option9</Menu.Item>
-          <Menu.Item key="18">option10</Menu.Item>
-          <Menu.Item key="19">option11</Menu.Item>
-          <Menu.Item key="20">option12</Menu.Item>
-        </SubMenu>
+        {menuData}
       </Menu>
     );
   }
