@@ -1,7 +1,7 @@
 import React from 'react'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import RouteAnimate from './routeAnimate'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import styles from './index.module'
 import Login from '../login'
 import Admin from '../admin'
 import Home from 'pages/home'
@@ -14,28 +14,19 @@ export default () => (
       <Route path="/login" component={Login} />
       <Route path="/admin" render={({ location }) => (
         <Admin>
-          <TransitionGroup component={null}>
-            <CSSTransition
-              key={location.key}
-              timeout={20000}
-              classNames={{
-                enter: styles.myEnter,
-                enterActive: styles.myEnterActive,
-                enterDone: styles.myEnterDone,
-                exit: styles.myExit,
-                exitActive: styles.myExitActive,
-                exitDone: styles.myExitDone,
-              }}
-            >
-              <Switch location={location}>
-                <Route path="/admin/home" component={Home} />
-                <Route path="/admin/list/query" component={ListDemo} />
-                <Route path="/admin/form/advanced/demo" component={FormDemo} />
-                <Route path="/admin/detail/base" component={DetailDemo} />
-                <Redirect from="/admin" to="/admin/home" />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
+          <RouteAnimate
+            location={location}
+            timeout={1000}
+            prefix={'my'}
+          >
+            <Switch location={location}>
+              <Route path="/admin/home" component={Home} />
+              <Route path="/admin/list/query" component={ListDemo} />
+              <Route path="/admin/form/advanced/demo" component={FormDemo} />
+              <Route path="/admin/detail/base" component={DetailDemo} />
+              <Redirect from="/admin" to="/admin/home" />
+            </Switch>
+          </RouteAnimate>
         </Admin>
       )} />
       <Redirect from='/' to='/login' />
