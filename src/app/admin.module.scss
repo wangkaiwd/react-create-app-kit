@@ -1,12 +1,31 @@
 @import "~styles/vars";
+@import "~styles/mixins";
 .admin {
   height: 100vh;
   width: 100%;
   .sider {}
   .logo {
-    height: 32px;
-    background: rgba(255, 255, 255, .2);
-    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    line-height: 64px;
+    background: $deep-green;
+    svg {
+      height: 32px;
+      width: auto;
+      animation: circleRotate 3s linear infinite;
+      transition: all .3s;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $white;
+      margin-left: $space-sm;
+      transition: all .3s;
+      flex-shrink: 1;
+      @include ell;
+    }
   }
   .contentWrapper {
     overflow: hidden;
@@ -19,5 +38,13 @@
     margin: 24px 24px 0;
     flex-shrink: 0;
     display: flex;
+  }
+  @keyframes circleRotate {
+    0% {
+      transform: rotate(0)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
   }
 }

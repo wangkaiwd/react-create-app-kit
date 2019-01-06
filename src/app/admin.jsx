@@ -4,6 +4,8 @@ import SideMenu from './layout/sideMenu';
 import MyHeader from './layout/header'
 import MyFooter from './layout/footer'
 import Crumbs from './layout/crumbs'
+import { ReactComponent as Logo } from 'images/logo.svg'
+import { ReactComponent as ReactLogo } from 'images/reactLogo.svg'
 import styles from './admin.module.scss'
 const { Content, Sider } = Layout;
 const SIDER_WIDTH = 240
@@ -12,7 +14,6 @@ class Admin extends Component {
     collapsed: false
   }
   toggleTrigger = () => {
-    console.log('trigger')
     this.setState({
       collapsed: !this.state.collapsed,
     });
@@ -28,7 +29,10 @@ class Admin extends Component {
             collapsed={collapsed}
             width={SIDER_WIDTH}
           >
-            <div className={styles.logo} />
+            <div className={styles.logo}>
+              <ReactLogo />
+              {!collapsed && <h2>Ant Design Pro</h2>}
+            </div>
             <SideMenu collapsed={collapsed} />
           </Sider>
           <Layout className={styles.contentWrapper}>

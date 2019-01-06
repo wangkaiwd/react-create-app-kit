@@ -1,5 +1,7 @@
 const path = require('path')
+// babel plugin
 const { injectBabelPlugin } = require('react-app-rewired');
+// eslint config
 const rewireEslint = require('react-app-rewire-eslint');
 function overrideEslintOptions(options) {
   return options;
@@ -10,7 +12,7 @@ module.exports = function override(config, env) {
       '@': path.resolve(__dirname, 'src/'),
       'components': path.resolve(__dirname, 'src/components'),
       'styles': path.resolve(__dirname, 'src/assets/styles'),
-      'iamges': path.resolve(__dirname, 'src/assets/images'),
+      'images': path.resolve(__dirname, 'src/assets/images'),
       'utils': path.resolve(__dirname, 'src/utils'),
       'http': path.resolve(__dirname, 'src/http'),
       'pages': path.resolve(__dirname, 'src/pages'),
@@ -22,9 +24,13 @@ module.exports = function override(config, env) {
   }
   // 添加ant design
   config = injectBabelPlugin(
-    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],
+    [
+      'import',
+      { libraryName: 'antd', libraryDirectory: 'es', style: 'css' },
+    ],
     config
   )
+  confgi = injectBabelPlugin(["@babel/plugin-proposal-decorators", { legacy: true }], config)
   config = rewireEslint(config, env, overrideEslintOptions);
   return config
 }
