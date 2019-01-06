@@ -8,6 +8,7 @@ module.exports = function override(config, env) {
   config.resolve = {
     alias: { // 别名
       '@': path.resolve(__dirname, 'src/'),
+      'components': path.resolve(__dirname, 'src/components'),
       'styles': path.resolve(__dirname, 'src/assets/styles'),
       'iamges': path.resolve(__dirname, 'src/assets/images'),
       'utils': path.resolve(__dirname, 'src/utils'),

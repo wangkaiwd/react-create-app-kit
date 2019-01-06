@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import Login from '../login'
 import Admin from '../admin'
 import Home from 'pages/home'
+import FormDemo from 'pages/form'
+import ListDemo from 'pages/list'
+import DetailDemo from 'pages/detail'
 export default () => (
   <Router>
     <Switch>
@@ -11,6 +14,9 @@ export default () => (
         <Admin>
           <Switch>
             <Route path="/admin/home" component={Home} />
+            <Route path="/admin/list/query" component={ListDemo} />
+            <Route path="/admin/form/advanced/demo" component={FormDemo} />
+            <Route path="/admin/detail/base" component={DetailDemo} />
             <Redirect from="/admin" to="/admin/home" />
           </Switch>
         </Admin>

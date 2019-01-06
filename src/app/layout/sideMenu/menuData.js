@@ -1,16 +1,21 @@
 const menuData = [
   {
+    icon: 'dashboard',
+    key: '/home',
+    title: '首页'
+  },
+  {
     icon: 'pie-chart',
-    key: '/pie-chart',
+    key: '/form',
     title: '表单页',
     children: [
       {
-        key: '/advanced',
+        key: '/form/advanced',
         title: '高级表单',
         children: [
           {
-            key: '/1',
-            title: '表单1'
+            key: '/form/advanced/demo',
+            title: '表单demo'
           }
         ]
       }
@@ -22,7 +27,7 @@ const menuData = [
     title: '列表页',
     children: [
       {
-        key: '/query',
+        key: '/list/query',
         title: '查询列表',
       }
     ]
@@ -33,7 +38,7 @@ const menuData = [
     title: '详情页',
     children: [
       {
-        key: '/base',
+        key: '/detail/base',
         title: '基础详情页',
       }
     ]

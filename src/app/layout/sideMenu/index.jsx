@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import {
   Menu,
   Icon
@@ -38,10 +39,12 @@ class SideMenu extends Component {
     )
   }
   menuItem = item => <Menu.Item key={item.key}>
-    {this.getIcon(item)}
-    <span>
-      {item.title}
-    </span>
+    <Link to={`/admin${item.key}`}>
+      {this.getIcon(item)}
+      <span>
+        {item.title}
+      </span>
+    </Link>
   </Menu.Item>
   render() {
     const { menuData } = this.state
