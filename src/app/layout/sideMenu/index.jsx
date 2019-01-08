@@ -18,6 +18,12 @@ class SideMenu extends Component {
   componentDidMount = () => {
     this.initMenu()
   }
+  componentDidUpdate = (prevProps) => {
+    const { pathname } = this.props.location
+    if (pathname !== prevProps.location.pathname) {
+      this.setState({ selectedKeys: [pathname] })
+    }
+  }
   initMenu = () => {
     const list = this.renderMenu(menuData)
     const { pathname } = this.props.history.location

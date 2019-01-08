@@ -1,25 +1,25 @@
 import { lazy } from 'react'
 const lazyComponent = path => lazy(() => import(`pages/${path}`))
+// 如果出现三级路由的话，可能会有问题
 const routeConfig = [
   {
     component: lazyComponent('home'),
     path: '/admin/home',
-    name: '首页'
   },
   {
     component: lazyComponent('form'),
     path: '/admin/form/advanced/demo',
-    name: '表单1'
+    breadNames: ['高级表单', '表单demo']
   },
   {
     component: lazyComponent('list'),
     path: '/admin/list/query',
-    name: '列表查询'
+    breadNames: ['列表页', '查询列表']
   },
   {
     component: lazyComponent('detail'),
     path: '/admin/detail/base',
-    name: '基础详情页',
+    breadNames: ['详情页', '基础详情页'],
   }
 ]
 export default routeConfig
