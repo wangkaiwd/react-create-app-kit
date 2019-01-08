@@ -1,14 +1,10 @@
-import React from 'react'
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import React, { Suspense } from 'react'
 import RouteAnimate from './routeAnimate'
+import Loading from 'components/loading'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import Login from '../login'
 import Admin from '../admin'
-import Home from 'pages/home'
-import FormDemo from 'pages/form'
-import ListDemo from 'pages/list'
-import DetailDemo from 'pages/detail'
-
+import routeConfig from './router.config'
 export default () => (
   <Router>
     <Switch>
@@ -20,13 +16,14 @@ export default () => (
             timeout={1000}
             prefix={'my'}
           >
-            <Switch location={location}>
-              <Route path="/admin/home" component={Home} />
-              <Route path="/admin/list/query" component={ListDemo} />
-              <Route path="/admin/form/advanced/demo" component={FormDemo} />
-              <Route path="/admin/detail/base" component={DetailDemo} />
-              <Redirect from="/admin" to="/admin/home" />
-            </Switch>
+            <Suspense fallback={<Loading />}>
+              <Switch location={location}>
+                {routeConfig.map(item => (
+                  <Route key={item.path} {...item} />
+                ))}
+                <Redirect from="/admin" to="/admin/home" />
+              </Switch>
+            </Suspense>
           </RouteAnimate>
         </Admin>
       )} />
@@ -45,3 +42,5 @@ export default () => (
 
 // Switch
 // 
+
+// 路由问题：暂时没有考虑嵌套路由的情况

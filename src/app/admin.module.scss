@@ -34,11 +34,11 @@
     min-height: 280px;
     overflow-y: scroll;
   }
-  .contents {
-    position: relative;
-    margin: 24px 24px 0;
-    flex-shrink: 0;
-  }
+  // .contents {
+  //   position: relative;
+  //   margin: 24px 24px 0;
+  //   flex-shrink: 0;
+  // }
   @keyframes circleRotate {
     0% {
       transform: rotate(0)

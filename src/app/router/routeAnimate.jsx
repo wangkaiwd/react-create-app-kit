@@ -16,7 +16,7 @@ class RouteAnimate extends Component {
   render() {
     const { location, timeout, prefix } = this.props
     return (
-      <TransitionGroup component={null}>
+      <TransitionGroup className={styles.contents}>
         <CSSTransition
           key={location.key}
           timeout={timeout}

@@ -39,9 +39,9 @@ class Admin extends Component {
             <MyHeader toggleTrigger={this.toggleTrigger} collapsed={collapsed} />
             <Crumbs />
             <Layout className={styles.container}>
-              <Content className={styles.contents}>
-                {this.props.children}
-              </Content>
+              {/* <Content className={styles.contents}> */}
+              {this.props.children}
+              {/* </Content> */}
               <MyFooter />
             </Layout>
           </Layout>
