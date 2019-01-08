@@ -1,20 +1,20 @@
 const menuData = [
   {
     icon: 'dashboard',
-    key: '/home',
+    key: '/admin/home',
     title: '首页'
   },
   {
     icon: 'pie-chart',
-    key: '/form',
+    key: '/admin/form',
     title: '表单页',
     children: [
       {
-        key: '/form/advanced',
+        key: '/admin/form/advanced',
         title: '高级表单',
         children: [
           {
-            key: '/form/advanced/demo',
+            key: '/admin/form/advanced/demo',
             title: '表单demo'
           }
         ]
@@ -23,22 +23,22 @@ const menuData = [
   },
   {
     icon: 'desktop',
-    key: '/list',
+    key: '/admin/list',
     title: '列表页',
     children: [
       {
-        key: '/list/query',
+        key: '/admin/list/query',
         title: '查询列表',
       }
     ]
   },
   {
     icon: 'inbox',
-    key: '/detail',
+    key: '/admin/detail',
     title: '详情页',
     children: [
       {
-        key: '/detail/base',
+        key: '/admin/detail/base',
         title: '基础详情页',
       }
     ]

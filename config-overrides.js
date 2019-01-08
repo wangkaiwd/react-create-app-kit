@@ -2,7 +2,6 @@ const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // babel plugin
 const { injectBabelPlugin } = require('react-app-rewired');
-const rewireLess = require('react-app-rewire-less');
 // eslint config
 const rewireEslint = require('react-app-rewire-eslint');
 function overrideEslintOptions(options) {
@@ -28,25 +27,12 @@ module.exports = function override(config, env) {
   config = injectBabelPlugin(
     [
       'import',
-      { libraryName: 'antd', libraryDirectory: 'es', style: 'true' },
+      { libraryName: 'antd', libraryDirectory: 'es', style: 'css' },
     ],
     config
   )
   config = injectBabelPlugin(["@babel/plugin-proposal-decorators", { legacy: true }], config)
   config = rewireEslint(config, env, overrideEslintOptions);
-  config = rewireLess.withLoaderOptions({
-    modifyVars: {
-      'primary-color': '#495060',
-      'menu-dark-bg': '#495060',
-      'menu-dark-submenu-bg': '#363e4f',
-      'normal-color': '#262a30',
-      'text-color': '#262a30',
-      'border-radius-base': '2px',
-      'border-radius-sm': '2px',
-      'font-family': 'Microsoft YaHei'
-    },
-    javascriptEnabled: true,
-  })(config, env);
   if (!config.plugins) {
     config.plugins = [];
   }
