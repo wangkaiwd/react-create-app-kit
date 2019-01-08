@@ -29,3 +29,6 @@ class Crumbs extends Component {
 }
 
 export default Crumbs;
+
+// 面包屑我配置思路
+// 1. 标题  2. 首页  3. 其余侧边栏结构
