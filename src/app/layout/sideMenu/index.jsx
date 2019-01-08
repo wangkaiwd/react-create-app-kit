@@ -33,18 +33,17 @@ class SideMenu extends Component {
   onChangeSelectKeys = ({ key }) => {
     this.setState({ selectedKeys: [key] })
   }
+  // SubMenu 展开/关闭的回调，注意：再点击Menu.Item的时候不会触发
+  // 现在的问题：在点击首页的时候，其它的侧边栏不会闭合
   onOpenChange = openKeys => {
     const { openKeys: oldOpenKeys } = this.state
     // 找出最新打开的侧边栏对应的openKeys
     const lastOpenKeys = openKeys.find(item => oldOpenKeys.indexOf(item) === -1)
-    // 如果最新打开的不是一级菜单，说明可能是二级或者三级菜单
-    if (rootMenuKey.indexOf(lastOpenKeys) === -1) {
+    if (rootMenuKey.indexOf(lastOpenKeys) === -1) {// 如果最新打开的是一级菜单，要用最新打开的侧边栏为数组重新赋值
       this.setState({ openKeys })
-    } else {
-      console.log('openKeys', openKeys)
+    } else { // 如果最新打开的不是一级菜单，说明可能是二级或者三级菜单
       this.setState({ openKeys: lastOpenKeys ? [lastOpenKeys] : [] })
     }
-    // 如果最新打开的是一级菜单，要用最新打开的侧边栏为数组重新赋值
   }
   menuChildren = (subItem) => {
     return (
