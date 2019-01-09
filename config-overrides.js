@@ -31,11 +31,14 @@ module.exports = function override(config, env) {
     ],
     config
   )
+  // 修饰器
   config = injectBabelPlugin(["@babel/plugin-proposal-decorators", { legacy: true }], config)
+  // 必须在这里配置eslint之后才可以使用.gitignore来进行项目内容的eslint的忽略
   config = rewireEslint(config, env, overrideEslintOptions);
   if (!config.plugins) {
     config.plugins = [];
   }
+  // 打包后资源分析
   if (process.env.NODE_ENV === 'production') {
     config.plugins.push(new BundleAnalyzerPlugin());
   }
