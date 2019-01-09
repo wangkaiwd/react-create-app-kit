@@ -21,7 +21,7 @@ export default () => (
                 {routeConfig.map(item => (
                   <Route key={item.path} {...item} />
                 ))}
-                <Redirect from="/admin" to="/admin/home" />
+                <Redirect from="/admin" to="/admin/home/analysis" />
               </Switch>
             </Suspense>
           </RouteAnimate>

@@ -31,7 +31,7 @@ class Admin extends Component {
           >
             <div className={`animated bounceInRight ${styles.logo}`}>
               <ReactLogo />
-              {!collapsed && <h2>Ant Design Pro</h2>}
+              {!collapsed && <h2>React Admin</h2>}
             </div>
             <SideMenu collapsed={collapsed} />
           </Sider>

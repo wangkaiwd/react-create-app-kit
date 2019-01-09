@@ -4,7 +4,7 @@ const lazyComponent = path => lazy(() => import(`pages/${path}`))
 const routeConfig = [
   {
     component: lazyComponent('home'),
-    path: '/admin/home',
+    path: '/admin/home/analysis',
   },
   {
     component: lazyComponent('form'),
