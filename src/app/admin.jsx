@@ -29,7 +29,7 @@ class Admin extends Component {
             collapsed={collapsed}
             width={SIDER_WIDTH}
           >
-            <div className={styles.logo}>
+            <div className={`animated bounceInRight ${styles.logo}`}>
               <ReactLogo />
               {!collapsed && <h2>Ant Design Pro</h2>}
             </div>
