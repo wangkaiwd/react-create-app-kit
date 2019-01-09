@@ -34,7 +34,7 @@ class Crumbs extends Component {
             {breadNames[breadNames.length - 1] || '首页'}
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <Link to="/admin/home">
+            <Link to="/admin/home/analysis">
               <Icon type="home" theme="filled" />
             </Link>
           </Breadcrumb.Item>
