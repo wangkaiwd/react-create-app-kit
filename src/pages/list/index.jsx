@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import { Card } from 'antd'
 class ListDemo extends Component {
   render() {
     return (
-      <div style={{ height: '400px', background: '#fff', width: '100%' }}>
+      <Card title="列表">
         ListDemo
-      </div>
+      </Card>
     );
   }
 }

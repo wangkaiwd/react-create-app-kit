@@ -13,7 +13,7 @@ export default () => (
         <Admin>
           <RouteAnimate
             location={location}
-            timeout={1000}
+            timeout={500}
             prefix={'my'}
           >
             <Suspense fallback={<Loading />}>

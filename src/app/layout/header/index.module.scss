@@ -1,10 +1,11 @@
+@import "~styles/vars";
 .header {
   .menu {
     line-height: 64px;
   }
   box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
   padding: 0;
-  background-color: #fff;
+  background-color: $white;
   margin-bottom: 1px;
   .trigger {
     font-size: 18px;
