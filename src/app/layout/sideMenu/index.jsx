@@ -47,7 +47,6 @@ class SideMenu extends Component {
   // SubMenu 展开/关闭的回调，注意：再点击Menu.Item的时候不会触发
   // 现在的问题：在点击首页的时候，其它的侧边栏不会闭合
   onOpenChange = openKeys => {
-    console.log('open', openKeys)
     const { openKeys: oldOpenKeys } = this.state
     // 找出最新打开的侧边栏对应的openKeys
     const lastOpenKeys = openKeys.find(item => oldOpenKeys.indexOf(item) === -1)
