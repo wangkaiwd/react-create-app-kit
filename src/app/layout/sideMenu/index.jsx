@@ -13,15 +13,20 @@ class SideMenu extends Component {
   state = {
     menuData: [],
     selectedKeys: [],
-    openKeys: []
+    openKeys: [],
+    firstHide: false
   }
   componentDidMount = () => {
     this.initMenu()
   }
   componentDidUpdate = (prevProps) => {
     const { pathname } = this.props.location
+    const { collapsed } = this.props
     if (pathname !== prevProps.location.pathname) {
       this.setState({ selectedKeys: [pathname] })
+    }
+    if (collapsed !== prevProps.collapsed) {
+      this.setState({ firstHide: collapsed })
     }
   }
   initMenu = () => {
@@ -42,13 +47,14 @@ class SideMenu extends Component {
   // SubMenu 展开/关闭的回调，注意：再点击Menu.Item的时候不会触发
   // 现在的问题：在点击首页的时候，其它的侧边栏不会闭合
   onOpenChange = openKeys => {
+    console.log('open', openKeys)
     const { openKeys: oldOpenKeys } = this.state
     // 找出最新打开的侧边栏对应的openKeys
     const lastOpenKeys = openKeys.find(item => oldOpenKeys.indexOf(item) === -1)
     if (rootMenuKey.indexOf(lastOpenKeys) === -1) {// 如果最新打开的是一级菜单，要用最新打开的侧边栏为数组重新赋值
-      this.setState({ openKeys })
+      this.setState({ openKeys, firstHide: false })
     } else { // 如果最新打开的不是一级菜单，说明可能是二级或者三级菜单
-      this.setState({ openKeys: lastOpenKeys ? [lastOpenKeys] : [] })
+      this.setState({ openKeys: lastOpenKeys ? [lastOpenKeys] : [], firstHide: false })
     }
   }
   menuChildren = (subItem) => {
@@ -76,14 +82,15 @@ class SideMenu extends Component {
     const {
       menuData,
       selectedKeys,
-      openKeys
+      openKeys,
+      firstHide
     } = this.state
     return (
       <Menu
         mode="inline"
         theme={'dark'}
         selectedKeys={selectedKeys}
-        openKeys={openKeys}
+        openKeys={firstHide ? null : openKeys}
         onClick={this.onChangeSelectKeys}
         onOpenChange={this.onOpenChange}
       >
