@@ -32,7 +32,7 @@
   }
   .container {
     min-height: 280px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   @keyframes circleRotate {
     0% {
