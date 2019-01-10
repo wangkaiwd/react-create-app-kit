@@ -12,7 +12,7 @@ class Login extends Component {
       if (!err) {
         if (value.userName === 'guest' && value.password === 'guest') {
           message.success('登录成功！')
-          this.props.history.replace('/admin/home')
+          this.props.history.replace('/admin/home/analysis')
         } else {
           message.warn('账号或密码错误!')
         }

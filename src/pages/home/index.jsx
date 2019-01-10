@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card } from 'antd'
 import Loading from 'components/loading'
-import { Map, Marker } from 'react-amap';
+import ReactAmap from 'components/reactAmap'
 import styles from './index.module.scss'
 class Home extends Component {
   state = {
@@ -21,16 +21,13 @@ class Home extends Component {
     const { zoomEnable, tip } = this.state
     return (
       <Card hoverable className={styles.home} title="地理位置">
-        <div className={styles.mapWrapper}>
-          <Map
-            loading={<Loading />}
-            plugins={['ToolBar']}
-            zoomEnable={zoomEnable}
-            zoom={20}
-          />
-        </div>
+        <ReactAmap
+          height="500px"
+          zoomEnable={zoomEnable}
+          zoom={20}
+        />
         <Button onClick={this.toggleZoom}>{tip}</Button>
-      </Card>
+      </Card >
     )
   }
 }

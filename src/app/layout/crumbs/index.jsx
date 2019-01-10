@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import { Breadcrumb, Row, Col, Icon } from 'antd'
 import styles from './index.module.scss'
-import menuData from '@/app/layout/sideMenu/menuData'
 import routeConfig from '@/app/router/router.config'
 @withRouter
 class Crumbs extends Component {
