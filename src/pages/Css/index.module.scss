@@ -69,4 +69,25 @@
     box-shadow: 1px 10px 10px -10px rgba(0, 0, 48, 0.6);
     transform: scale(1.2);
   }
+  .scrollWrapper {
+    position: relative;
+    p {
+      max-height: 200px;
+      overflow: auto;
+    }
+    &::after {
+      // 在底部定位一个div,通过渐变和透明度来控制由上到下的模糊层，遮住下边的文字，实现越到底部看到的内容越淡
+      position: absolute;
+      content: '';
+      height: 40%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      //线性渐变函数
+      background: linear-gradient( rgba(255, 255, 255, 0.002), white);
+    }
+  }
+  .space {
+    margin-top: $space-base;
+  }
 }

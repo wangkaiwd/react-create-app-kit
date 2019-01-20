@@ -31,6 +31,28 @@ class CssDemo extends Component {
             </Card>
           </Col>
         </Row>
+        <Row className={styles.space}>
+          <Col span={8}>
+            <Card title="Overflow scroll gradient" hoverable>
+              <div className={styles.scrollWrapper}>
+                <p>
+                  orem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure id exercitationem nulla qui repellat laborum vitae,
+                    molestias tempora velit natus. Quas, assumenda nisi.
+                    Quisquam enim qui iure, consequatur velit sit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure id exercitationem nulla qui repellat laborum vitae,
+                    molestias tempora velit natus. Quas, assumenda nisi.
+                    Quisquam enim qui iure, consequatur velit sit?
+                    这是测试文字这是测试文字这是测试文字这是测试文字这是测试文字
+                    这是测试文字这是测试文字这是测试文字这是测试文字这是测试文字
+                    这是测试文字这是测试文字这是测试文字这是测试文字这是测试文字
+                    这是测试文字这是测试文字这是测试文字这是测试文字这是测试文字
+                </p>
+              </div>
+            </Card>
+          </Col>
+        </Row>
       </Card>
     );
   }
