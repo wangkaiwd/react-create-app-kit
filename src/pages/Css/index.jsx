@@ -24,7 +24,11 @@ class CssDemo extends Component {
             </Card>
           </Col>
           <Col span={8}>
-            <Card title="Card title" hoverable>Card content</Card>
+            <Card title="Hover Shadow Box Animation" hoverable>
+              <p className={styles.shadowBox}>
+                Box it!
+              </p>
+            </Card>
           </Col>
         </Row>
       </Card>

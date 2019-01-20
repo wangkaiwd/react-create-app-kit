@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd'
+import { Link } from 'react-router-dom'
 import SideMenu from './layout/sideMenu';
 import MyHeader from './layout/header'
 import MyFooter from './layout/footer'
 import Crumbs from './layout/crumbs'
-import { ReactComponent as Logo } from 'images/logo.svg'
+// import { ReactComponent as Logo } from 'images/logo.svg'
 import { ReactComponent as ReactLogo } from 'images/reactLogo.svg'
 import styles from './admin.module.scss'
 const { Content, Sider } = Layout;
@@ -31,7 +32,7 @@ class Admin extends Component {
           >
             <div className={`animated bounceInRight ${styles.logo}`}>
               <ReactLogo />
-              {!collapsed && <h2>React Admin</h2>}
+              {!collapsed && <h2><Link to={`/home/analysis`}>React Admin</Link></h2>}
             </div>
             <SideMenu collapsed={collapsed} />
           </Sider>
