@@ -9,7 +9,7 @@ export default () => (
   <Router>
     <Switch>
       <Route path="/login" component={Login} />
-      <Route path="/admin" render={({ location }) => (
+      <Route path="/" render={({ location }) => (
         <Admin>
           <RouteAnimate
             location={location}
@@ -21,7 +21,7 @@ export default () => (
                 {routeConfig.map(item => (
                   <Route key={item.path} {...item} />
                 ))}
-                <Redirect from="/admin" to="/admin/home/analysis" />
+                <Redirect from="/" to="/home/analysis" />
               </Switch>
             </Suspense>
           </RouteAnimate>

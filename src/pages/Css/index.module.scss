@@ -1,0 +1,62 @@
+@import "~styles/vars";
+.css {
+  .buttonBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    background-color: #c47135;
+    border: none;
+    outline: 0;
+    color: $white;
+    padding: 12px 40px 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: '';
+    height: 24px;
+    width: 24px;
+    transition: all 0.25s;
+  }
+  .button::before {
+    border-top: 2px solid red;
+    top: -4px;
+    left: 0;
+  }
+  .button:after {
+    border-bottom: 2px solid red;
+    bottom: -4px;
+    right: 0;
+  }
+  .button:hover:before,
+  .button:hover:after {
+    width: 100%;
+  }
+  .donutWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .donut {
+    // 问题：不能为圆环内的残缺部分指定宽度
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; // 先将div设置成圆
+    border: 4px solid rgba(0, 0, 0, 0.1); // 为圆形div设置border,这时样子看起来像一个圆环
+    border-left-color: #7983ff; // 为圆形div的一个方向的border重新设置颜色,这个颜色只能覆盖1/4,并不能指定宽度
+    animation: donut-spin 1s infinite linear; // 进行不停的循环旋转
+  }
+  @keyframes donut-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

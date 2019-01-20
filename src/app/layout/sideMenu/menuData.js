@@ -1,50 +1,44 @@
 const menuData = [
   {
     icon: 'dashboard',
-    key: '/admin/home',
+    key: '/home',
     title: 'Dashboard',
     children: [
       {
-        key: '/admin/home/analysis',
+        key: '/home/analysis',
         title: '分析页'
       }
     ]
   },
   {
-    icon: 'pie-chart',
-    key: '/admin/form',
-    title: '表单页',
+    icon: 'eye',
+    key: '/css',
+    title: 'CSS-Skill',
     children: [
       {
-        key: '/admin/form/advanced',
-        title: '高级表单',
-        children: [
-          {
-            key: '/admin/form/advanced/demo',
-            title: '表单demo'
-          }
-        ]
+        key: '/css/demo01',
+        title: 'demo01',
       }
     ]
   },
   {
     icon: 'desktop',
-    key: '/admin/list',
+    key: '/list',
     title: '列表页',
     children: [
       {
-        key: '/admin/list/query',
+        key: '/list/query',
         title: '查询列表',
       }
     ]
   },
   {
     icon: 'inbox',
-    key: '/admin/detail',
+    key: '/detail',
     title: '详情页',
     children: [
       {
-        key: '/admin/detail/base',
+        key: '/detail/base',
         title: '基础详情页',
       }
     ]

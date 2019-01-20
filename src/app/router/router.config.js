@@ -4,21 +4,21 @@ const lazyComponent = path => lazy(() => import(`pages/${path}`))
 const routeConfig = [
   {
     component: lazyComponent('home'),
-    path: '/admin/home/analysis',
+    path: '/home/analysis',
   },
   {
-    component: lazyComponent('form'),
-    path: '/admin/form/advanced/demo',
-    breadNames: ['高级表单', '表单demo']
+    component: lazyComponent('Css'),
+    path: '/css/demo01',
+    breadNames: ['CSS-Skill', 'demo01']
   },
   {
     component: lazyComponent('list'),
-    path: '/admin/list/query',
+    path: '/list/query',
     breadNames: ['列表页', '查询列表']
   },
   {
     component: lazyComponent('detail'),
-    path: '/admin/detail/base',
+    path: '/detail/base',
     breadNames: ['详情页', '基础详情页'],
   }
 ]

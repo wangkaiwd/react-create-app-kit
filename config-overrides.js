@@ -1,5 +1,6 @@
 const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WebpackBar = require('webpackbar');
 // babel plugin
 const { injectBabelPlugin } = require('react-app-rewired');
 // eslint config
@@ -38,6 +39,7 @@ module.exports = function override(config, env) {
   if (!config.plugins) {
     config.plugins = [];
   }
+  config.plugins.push(new WebpackBar())
   // 打包后资源分析
   if (process.env.NODE_ENV === 'production') {
     config.plugins.push(new BundleAnalyzerPlugin());
