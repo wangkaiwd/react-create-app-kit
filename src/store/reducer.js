@@ -1,4 +1,5 @@
-const defaultState = {}
-export default (state = defaultState, action) => {
-  return state
-}
+import { combineReducers } from 'redux';
+import loginReducer from 'app/login/store/reducer';
+
+const defaultState = {};
+export default combineReducers({ loginReducer });
