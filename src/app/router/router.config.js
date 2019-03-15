@@ -1,10 +1,12 @@
-import { lazy } from 'react'
-const lazyComponent = path => lazy(() => import(`pages/${path}`))
+import { lazy } from 'react';
+
+const lazyComponent = path => lazy(() => import(`pages/${path}`));
 // 如果出现三级路由的话，可能会有问题
 const routeConfig = [
   {
     component: lazyComponent('home'),
     path: '/home/analysis',
+    breadNames: []
   },
   {
     component: lazyComponent('Css'),
@@ -21,5 +23,5 @@ const routeConfig = [
     path: '/detail/base',
     breadNames: ['详情页', '基础详情页'],
   }
-]
-export default routeConfig
+];
+export default routeConfig;
