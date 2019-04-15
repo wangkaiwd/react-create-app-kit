@@ -1,14 +1,15 @@
-import React, { Suspense } from 'react'
-import RouteAnimate from './routeAnimate'
-import Loading from 'components/loading'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import Login from '../login'
-import Admin from '../admin'
-import routeConfig from './router.config'
+import React, { Suspense } from 'react';
+import RouteAnimate from './routeAnimate';
+import Loading from 'components/loading';
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import Login from '../login';
+import Admin from '../admin';
+import routeConfig from './router.config';
+
 export default () => (
   <Router>
     <Switch>
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={Login}/>
       <Route path="/" render={({ location }) => (
         <Admin>
           <RouteAnimate
@@ -16,18 +17,18 @@ export default () => (
             timeout={500}
             prefix={'my'}
           >
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loading/>}>
               <Switch location={location}>
                 {routeConfig.map(item => (
                   <Route key={item.path} {...item} />
                 ))}
-                <Redirect from="/" to="/home/analysis" />
+                <Redirect from="/" to="/home/analysis"/>
               </Switch>
             </Suspense>
           </RouteAnimate>
         </Admin>
-      )} />
-      <Redirect from='/' to='/login' />
+      )}/>
+      <Redirect from='/' to='/login'/>
     </Switch>
   </Router>
 )
@@ -41,6 +42,6 @@ export default () => (
 // https://stackoverflow.com/questions/47474448/react-router-v4-warning-you-tried-to-redirect-to-the-same-route-youre-curren
 
 // Switch
-// 
+//
 
 // 路由问题：暂时没有考虑嵌套路由的情况
