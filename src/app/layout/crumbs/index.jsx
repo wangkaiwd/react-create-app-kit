@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Breadcrumb, Icon } from 'antd';
 import styles from './index.module.scss';
@@ -53,5 +53,5 @@ class Crumbs extends Component {
 
 export default Crumbs;
 
-// 面包屑我配置思路
-// 1. 标题  2. 首页  3. 其余侧边栏结构
+// 面包屑问题：
+// 1. 动态生成  2. 点击跳转

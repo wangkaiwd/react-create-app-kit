@@ -2,12 +2,14 @@
   "name": "react-pro",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wangkaiwd.github.io/react-create-app-kit",
   "dependencies": {
     "animate.css": "^3.7.0",
     "antd": "^3.11.6",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
     "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-amap": "^1.2.7",
@@ -25,7 +27,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,7 +1,7 @@
 const menuData = [
   {
-    icon: 'dashboard',
     key: '/home',
+    icon: 'dashboard',
     title: 'Dashboard',
     children: [
       {
@@ -43,6 +43,6 @@ const menuData = [
       }
     ]
   }
-]
+];
 
-export default menuData
+export default menuData;
