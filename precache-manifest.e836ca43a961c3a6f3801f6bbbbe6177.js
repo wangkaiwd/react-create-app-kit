@@ -52,20 +52,20 @@ self.__precacheManifest = [
     "url": "/react-create-app-kit/static/js/7.8cda0945.chunk.js"
   },
   {
-    "revision": "f071498e032f704558cc",
+    "revision": "930d9db731daab48b644",
     "url": "/react-create-app-kit/static/css/main.a87248b1.chunk.css"
   },
   {
-    "revision": "f071498e032f704558cc",
-    "url": "/react-create-app-kit/static/js/main.f071498e.chunk.js"
+    "revision": "930d9db731daab48b644",
+    "url": "/react-create-app-kit/static/js/main.930d9db7.chunk.js"
   },
   {
-    "revision": "3fbeb35da05543f5e49e",
+    "revision": "16116333755d605fcc15",
     "url": "/react-create-app-kit/static/css/9.52d7c158.chunk.css"
   },
   {
-    "revision": "3fbeb35da05543f5e49e",
-    "url": "/react-create-app-kit/static/js/9.3fbeb35d.chunk.js"
+    "revision": "16116333755d605fcc15",
+    "url": "/react-create-app-kit/static/js/9.16116333.chunk.js"
   },
   {
     "revision": "d3c0bc8e3738adc039c3",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/react-create-app-kit/static/media/reactLogo.a4727665.svg"
   },
   {
-    "revision": "ffcd95d667a528bc46c7dd64f9a7f4b2",
+    "revision": "d8b683bfbb7a3647b2918eaacad05da3",
     "url": "/react-create-app-kit/index.html"
   }
 ];
