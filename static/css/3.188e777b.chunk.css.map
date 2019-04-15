@@ -1,0 +1,1 @@
+{"version":3,"sources":["D:/sourceCode/personal/react-create-app-kit/src/pages/home/D:/sourceCode/personal/react-create-app-kit/src/pages/home/D:/sourceCode/personal/react-create-app-kit/src/pages/home/index.module.scss"],"names":[],"mappings":"AACA,kBACE,SAAU,CACX","file":"3.188e777b.chunk.css","sourcesContent":["@import \"~styles/vars\";\r\n.home {\r\n  flex: auto;\r\n}"]}
